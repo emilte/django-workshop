@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  # Custom name for our service (container to build).
+  clean:
+    build: ./clean # Build in the context of this directory (meaning: use Dockerfile, .dockerignore etc.)
+    volumes:
+      - ./clean:/app
+    env_file:
+      - ./clean/.docker.env
+    environment:
+      - IS_DOCKER=True
+    ports:
+      - "8000:8000" # Quotes are required. django
+      - "5678:5678" # Quotes are required. debugpy
+
