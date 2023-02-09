@@ -12,6 +12,8 @@ db.sqlite3-journal
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
+__pycache__
+
 # Environments
 *.env
 !*.example.env
