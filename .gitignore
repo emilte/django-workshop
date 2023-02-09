@@ -1,4 +1,5 @@
 .pytest_cache/
+.mypy_cache/
 
 # Translations
 *.mo
@@ -19,6 +20,7 @@ __pycache__
 !*.example.env
 env/
 venv/
+.venv/
 
 # local-history
 .history/
