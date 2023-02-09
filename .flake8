@@ -13,7 +13,7 @@ require-plugins = flake8-print, flake8-keyword-arguments, flake8-quotes, flake8-
 
 # Ignore specific errors in specific modules/files (glob pattern).
 # Format: <some/*/glob/**/pattern.txt>:<error>
-# Example: root/urls.py:T201
+# Example: blog/urls.py:T201
 per-file-ignores = 
     ; Don't care about print statements in commands.
     **/management/commands/**:T201,
@@ -28,7 +28,6 @@ extend-exclude=
     .venv,
     tests,
     migrations,
-    root/scripts/testing.py,
 
 extend-ignore=
     E266,
