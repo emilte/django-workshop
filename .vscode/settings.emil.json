@@ -1,0 +1,172 @@
+{
+  /// linting ///
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint",
+  "python.linting.pylintArgs": [
+    "--init-hook",
+    "from pylint.config import find_pylintrc; import os, sys; sys.path.append(os.path.dirname(find_pylintrc()))"
+  ],
+  "files.autoSave": "onFocusChange",
+  "python.linting.ignorePatterns": [
+    ".venv",
+    "**/.pyenv/**/*.*"
+  ],
+  /// testing ///
+  "python.testing.pytestArgs": [
+    "--no-cov",
+    "--ignore=frontend",
+    "--ignore=frontend-legacy",
+    "--ignore=Feide/templates/stats/frontend"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  /// formatting ///
+  "python.formatting.provider": "yapf",
+  "editor.formatOnSave": true,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  // "gitlens.integrations.enabled": true,
+  "gitlens.remotes": [
+    {
+      "domain": "gitlab.sikt.no",
+      "type": "GitLab"
+    }
+  ],
+  /// Other ///
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingTypeStubs": "none"
+  },
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "off",
+  "editor.rulers": [
+    120
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#fff",
+    "titleBar.activeBackground": "#1f4698",
+    "titleBar.inactiveBackground": "#1f4698"
+  },
+  // Autocomplete html attributes as well as django tags.
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "gitlab.showMrStatusOnStatusBar": true,
+  "gitlab.showStatusBarLinks": true,
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "window.title": "🔵 ${activeEditorShort}${separator}${rootName}",
+  "editor.bracketPairColorization.enabled": true,
+  /// SQLTools ///
+  "sqltools.connections": [
+    {
+      "name": "Feide (docker)",
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "database": "feide_customer_portal",
+      "username": "postgres",
+      "password": ""
+    }
+  ],
+  /// devcontainer ///
+  // "jest.jestCommandLine": "./frontend/node_modules/.bin/jest --config /app/frontend/jest.config.js",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll.eslint": true
+    }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    "./frontend",
+    "./frontend-legacy",
+    "./Feide/templates/stats/frontend"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  /// SVG ///
+  "svg.preview.background": "editor",
+  /// Exclude ///
+  // Lets vscode ignore large folders when loading
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true,
+    "**/venv/**": true,
+    "**/.venv/**": true
+  },
+  // Hide folders from treeview.
+  // They will appear temporary when inspecting source code.
+  "files.exclude": {
+    "**/.git": false,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true,
+    "**/venv/**": true,
+    "**/.venv/**": false
+  },
+  // Large folders you probably don't need to scan on project-search.
+  "search.exclude": {
+    "**/.git": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true,
+    "**/venv/**": true,
+    "**/.venv/**": true
+  }
+}

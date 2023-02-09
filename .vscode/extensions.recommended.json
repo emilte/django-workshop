@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "jock.svg",
+    "albert.tabout",
+    "mtxr.sqltools",
+    "eamodio.gitlens",
+    "mikestead.dotenv",
+    "hediet.vscode-drawio",
+    "mskelton.npm-outdated",
+    "mrorz.language-gettext",
+    "gitlab.gitlab-workflow",
+    "mtxr.sqltools-driver-pg",
+    "yzhang.markdown-all-in-one",
+    "ms-azuretools.vscode-docker",
+    "christian-kohler.npm-intellisense",
+    "ms-vscode-remote.remote-containers"
+  ]
+}
