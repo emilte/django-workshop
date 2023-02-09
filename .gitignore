@@ -18,7 +18,7 @@ env/
 venv/
 
 # local-history
-.history
+.history/
 
 ### VSCode ###
 .vscode/**/*
