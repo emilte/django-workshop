@@ -6,6 +6,7 @@ services:
     build: ./clean # Build in the context of this directory (meaning: use Dockerfile, .dockerignore etc.)
     volumes:
       - ./clean:/app
+      - ignore_volume:/app/.venv
     env_file:
       - ./clean/.docker.env
     environment:
@@ -14,3 +15,19 @@ services:
       - "8000:8000" # Quotes are required. django
       - "5678:5678" # Quotes are required. debugpy
 
+  # Custom name for our service (container to build).
+  solution:
+    build: ./solution # Build in the context of this directory (meaning: use Dockerfile, .dockerignore etc.)
+    volumes:
+      - ./solution:/app
+      - ignore_volume:/app/.venv
+    env_file:
+      - ./solution/.docker.env
+    environment:
+      - IS_DOCKER=True
+    ports:
+      - "8000:8000" # Quotes are required. django
+      - "5678:5678" # Quotes are required. debugpy
+
+volumes:
+  ignore_volume:

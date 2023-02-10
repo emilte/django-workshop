@@ -26,5 +26,8 @@ RUN python -m pipenv install --dev --deploy
 # Copy rest of the project into image.
 COPY . .
 
+# Expose port for django and debugpy.
+EXPOSE 8000
+EXPOSE 5678
 
 CMD ["bash"]
