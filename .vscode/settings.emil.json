@@ -1,17 +1,8 @@
 {
   /// linting ///
   "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint",
-  "python.linting.pylintArgs": [
-    "--init-hook",
-    "from pylint.config import find_pylintrc; import os, sys; sys.path.append(os.path.dirname(find_pylintrc()))"
-  ],
   "files.autoSave": "onFocusChange",
-  "python.linting.ignorePatterns": [
-    ".venv",
-    "**/.pyenv/**/*.*"
-  ],
+  "python.linting.ignorePatterns": [".venv", "**/.pyenv/**/*.*"],
   /// testing ///
   "python.testing.pytestArgs": [
     "--no-cov",
@@ -43,9 +34,7 @@
   },
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "off",
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#fff",
     "titleBar.activeBackground": "#1f4698",
