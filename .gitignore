@@ -15,6 +15,8 @@ __pypackages__/
 
 __pycache__
 
+static
+
 # Environments
 *.env
 !*.example.env
