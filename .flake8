@@ -7,9 +7,9 @@
 ; Version is downgraded from 6.0.0 to allow plugins to catch up with breaking changes.
 ; TODO: upgrade later.
 
-; Same as pylint and yapf.
+; Same as yapf.
 max-line-length = 160
-require-plugins = flake8-print, flake8-keyword-arguments, flake8-quotes, flake8-annotations
+require-plugins = flake8-print, flake8-quotes
 
 # Ignore specific errors in specific modules/files (glob pattern).
 # Format: <some/*/glob/**/pattern.txt>:<error>
