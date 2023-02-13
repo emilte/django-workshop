@@ -3,6 +3,7 @@
   "remote": {
     "http://localhost:3000/components/Header.tsx?ssr&v=ldyeb721": "8af22690205a155043f956741a038b915fc606323127d0fb1095107f72665fb3",
     "http://localhost:3000/components/Header.tsx?ssr&v=le22y05i": "8af22690205a155043f956741a038b915fc606323127d0fb1095107f72665fb3",
+    "http://localhost:3000/routes/_404.tsx?ssr&v=le22y05i": "aaf52145764d274c64be03913936ae4b08d4dd1956df5a140433ac74a64d908c",
     "http://localhost:3000/routes/_app.tsx?ssr&v=ldyeb721": "2146d533e2f3335277b305c743f56aa97241d5a1b88363f20e534c8472a3f473",
     "http://localhost:3000/routes/_app.tsx?ssr&v=le22y05i": "6180d76344dc16078d051abfa31d8b3eeb1410ec897a2a92bcf36f7e23b450a5",
     "http://localhost:3000/routes/index.tsx?ssr&v=ldyeb721": "a1ce9f7c07631f18dff46367ff904401559ba6ba173e9b743380be1afc587288",
