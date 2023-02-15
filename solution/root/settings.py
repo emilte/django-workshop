@@ -173,7 +173,7 @@ LOGGING = {
                 'format': '%(asctime)s  %(name)s  %(levelname)s  %(message)s',
             },
             'pretty': {
-                'format': '\n\n\n[%(levelname)s]  %(asctime)s  (%(name)s):\n- %(message)s',
+                'format': '\n[%(levelname)s]  %(asctime)s  (%(name)s):\n- %(message)s\n',
             },
         },
     'filters':
