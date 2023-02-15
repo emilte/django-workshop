@@ -1,4 +1,4 @@
 [style]
 based_on_style = facebook
-column_limit = 120
+column_limit = 140
 blank_line_before_nested_class_or_def = true
