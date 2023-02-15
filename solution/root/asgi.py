@@ -13,7 +13,7 @@ from django.core.asgi import get_asgi_application
 
 from blog.utils.debugpy import initialize_debugpy
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blog.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'root.settings')
 
 application = get_asgi_application()
 
