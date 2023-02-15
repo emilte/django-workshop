@@ -1,0 +1,8 @@
+*
+!.*.example.env
+!.dockerignore
+!.gitignore
+!Dockerfile
+!entrypoint.sh
+!Pipfile
+!Pipfile.lock
