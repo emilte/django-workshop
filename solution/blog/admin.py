@@ -14,6 +14,7 @@ from blog.custom_classes.admin_classes import (
 
 from .models import (
     User,
+    FieldDisplay,
 )
 
 # Common fields:
@@ -143,5 +144,24 @@ class UserObjectPermissionAdmin(CustomGuardedModelAdmin):
 ### End: Guardian models ###
 
 ### Our models ###
+
+
+@admin.register(FieldDisplay)
+class FieldDisplayAdmin(CustomGuardedModelAdmin):
+    # ordering = ['user']
+    # sortable_by = ['id', 'user', 'permission', 'content_type']
+    list_display = [
+        'id', '__str__', 'charfield', 'charfield_unique', 'unique_together_one', 'unique_together_two',
+        'charfield_unique', 'textfield', 'boolean', 'time', 'date', 'boolean', 'choices', 'foreignkey', 'duration',
+        'file_field', 'email', 'float_field', 'integer', 'email', 'image', 'json', 'url', 'uuid', 'updated', 'created'
+    ]
+    list_filter = ['choices']
+    search_fields = ['id']
+    filter_horizontal = ['many_to_many']
+    autocomplete_fields = ['foreignkey']
+    # list_select_related = True
+
+    readonly_fields = ['updated', 'created']
+
 
 ### End: Our models ###
