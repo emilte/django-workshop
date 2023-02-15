@@ -43,6 +43,7 @@ services:
     # command: pipenv run gunicorn --reload blog.wsgi:application
     depends_on:
       - solution-db
+    command: pipenv run python manage.py runserver 0.0.0.0:8000
     ports:
       - '8002:8000' # Quotes are required. django
       - '6002:5678' # Quotes are required. debugpy
