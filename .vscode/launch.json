@@ -5,17 +5,34 @@
   "version": "0.2.0",
   "configurations": [
     // Emil debugger:
-    // Attaches to injected debugpy hosted on port 5678.
+    // Attaches to running process on port.
     // https://code.visualstudio.com/docs/containers/docker-compose
     {
-      "name": "Emil debugger",
+      "name": "Debugger (clean)",
       "type": "python",
       "request": "attach",
       "django": true,
       "justMyCode": false,
       "connect": {
         "host": "0.0.0.0",
-        "port": 5678
+        "port": 6001
+      },
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}",
+          "remoteRoot": "/app"
+        }
+      ]
+    },
+    {
+      "name": "Debugger (solution)",
+      "type": "python",
+      "request": "attach",
+      "django": true,
+      "justMyCode": false,
+      "connect": {
+        "host": "0.0.0.0",
+        "port": 6002
       },
       "pathMappings": [
         {
