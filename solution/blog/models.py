@@ -13,33 +13,32 @@ class FieldDisplay(models.Model):
         NURSE = 'nurse'
         DOCTOR = 'doctor'
 
-    charfield = models.CharField(max_length=140)
-    charfield_unique = models.CharField(max_length=140, unique=True)
-    unique_together_one = models.CharField(max_length=140, unique=True)
-    unique_together_two = models.CharField(max_length=140, unique=True)
-    charfield_unique = models.CharField(max_length=140, unique=True)
+    charfield = models.CharField(max_length=140, blank=True, null=True)
+    charfield_unique = models.CharField(max_length=140, unique=True, blank=True, null=True)
+    unique_together_one = models.CharField(max_length=140, unique=True, blank=True, null=True)
+    unique_together_two = models.CharField(max_length=140, unique=True, blank=True, null=True)
+    charfield_unique = models.CharField(max_length=140, unique=True, blank=True, null=True)
+    textfield = models.TextField(blank=True, null=True)
+    boolean = models.BooleanField(blank=True, null=True)
+    time = models.TimeField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    boolean = models.DateTimeField(blank=True, null=True)
+    choices = models.CharField(choices=Type.choices, max_length=20, blank=True, null=True)
+    many_to_many = models.ManyToManyField(to='FieldDisplay', related_name='many', blank=True)
+    foreignkey = models.ForeignKey(to='FieldDisplay', on_delete=models.PROTECT, related_name='foreign', blank=True, null=True)
+    duration = models.DurationField(blank=True, null=True)
+    file_field = models.FileField(blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    float_field = models.FloatField(blank=True, null=True)
+    integer = models.SmallIntegerField(blank=True, null=True)
+    email = models.IntegerField(blank=True, null=True)
+    image = models.ImageField(blank=True, null=True)
+    json = models.JSONField(blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
+    uuid = models.UUIDField(blank=True, null=True)
 
-    textfield = models.TextField()
-    boolean = models.BooleanField()
-    time = models.TimeField()
-    date = models.DateField()
-    boolean = models.DateTimeField()
-    choices = models.CharField(choices=Type.choices, max_length=20)
-    many_to_many = models.ManyToManyField(to='FieldDisplay', related_name='many')
-    foreignkey = models.ForeignKey(to='FieldDisplay', on_delete=models.PROTECT, related_name='foreign')
-    duration = models.DurationField()
-    file_field = models.FileField()
-    email = models.EmailField()
-    float_field = models.FloatField()
-    integer = models.SmallIntegerField()
-    email = models.IntegerField()
-    image = models.ImageField()
-    json = models.JSONField()
-    url = models.URLField()
-    uuid = models.UUIDField()
-
-    updated = models.DateTimeField(auto_now=True)
-    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True, blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     class Meta:
         """
@@ -48,7 +47,9 @@ class FieldDisplay(models.Model):
         https://docs.djangoproject.com/en/4.1/ref/models/options/
         """
         ordering = ['updated']
-        unique_together = ['unique_together_one', 'unique_together_two']
+        unique_together = [
+            ('unique_together_one', 'unique_together_two'),
+        ]
         permissions = [
             ('can_change_created_date', 'Can change created date'),
         ]
