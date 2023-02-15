@@ -8,11 +8,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-import sys
 import logging.config  # noqa: E402
 from pathlib import Path
-
-from .utils.constants import Environment
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +28,7 @@ DEBUG = os.environ.get('DEBUG', True)
 
 ALLOWED_HOSTS: list[str] = ['*']
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ.get('SECRET_KEY', 'unsecure')
 
 # Static
 STATIC_ROOT = BASE_DIR / 'static'
@@ -164,17 +161,21 @@ INSTALLED_APPS += [
 
 ################## LOGGING ##################
 
-LOGFILENAME = BASE_DIR / 'logs' / '.log'
+LOGFILENAME = BASE_DIR / 'logs' / 'server.log'
 SQL_LOG_FILE = BASE_DIR / 'logs' / 'sql.log'
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'file': {
-            'format': '%(asctime)s %(name)-8s %(levelname)-8s %(message)s',
+    'formatters':
+        {
+            'file': {
+                'format': '%(asctime)s  %(name)s  %(levelname)s  %(message)s',
+            },
+            'pretty': {
+                'format': '\n\n\n[%(levelname)s]  %(asctime)s  (%(name)s):\n- %(message)s',
+            },
         },
-    },
     'filters':
         {
             'require_debug_false': {
@@ -189,11 +190,13 @@ LOGGING = {
             'null': {
                 'class': 'logging.NullHandler',
             },
-            'console': {
-                'level': 'DEBUG',
-                'class': 'logging.StreamHandler',
-                'filters': ['require_debug_true'],
-            },
+            'console':
+                {
+                    'level': 'DEBUG',
+                    'class': 'logging.StreamHandler',
+                    'formatter': 'pretty',
+                    'filters': ['require_debug_true'],
+                },
             'file':
                 {
                     'level': 'INFO',
@@ -201,13 +204,7 @@ LOGGING = {
                     'formatter': 'file',
                     'mode': 'w',  # Reset file each time server reloads.
                     'filename': LOGFILENAME,
-                },
-            'humio':
-                {
-                    'level': 'DEBUG' if DEBUG else 'INFO',
-                    'formatter': 'file',
-                    'class': 'logging.StreamHandler',
-                    'stream': sys.stdout,
+                    'filters': ['require_debug_true'],
                 },
             'sql_file':
                 {
@@ -222,13 +219,13 @@ LOGGING = {
         {
             # Default logger.
             '': {
-                'handlers': ['humio', 'file'],
+                'handlers': ['console', 'file'],
                 'propagate': True,
                 'level': 'INFO',
             },
             # Catch all from django unless explicitly prevented propagation.
             'django': {
-                'handlers': ['console'],
+                'handlers': ['console', 'file'],
                 'propagate': True,
                 'level': 'DEBUG',
             },
@@ -240,13 +237,13 @@ LOGGING = {
                 },
             'django.server':
                 {
-                    'handlers': ['console'],
+                    'handlers': ['console', 'file'],
                     'propagate': False,  # Don't pass up to 'django'.
                     'level': 'INFO',
                 },
             'django.utils.autoreload':
                 {
-                    'handlers': ['console'],
+                    'handlers': ['console', 'file'],
                     'propagate': False,  # Don't pass up to 'django'.
                     'level': 'INFO',
                 },
@@ -262,6 +259,7 @@ logging.config.dictConfig(LOGGING)
 ATOMIC_REQUESTS = True
 APPEND_SLASH = True
 
+### Database ###
 DOCKER_DB_NAME = 'docker.db.sqlite3'
 LOCAL_DB_NAME = 'db.sqlite3'
 DB_NAME = DOCKER_DB_NAME if IS_DOCKER else LOCAL_DB_NAME
@@ -272,3 +270,4 @@ DATABASES = {
         'NAME': BASE_DIR / 'database' / DB_NAME,
     }
 }
+### End: Database ###
