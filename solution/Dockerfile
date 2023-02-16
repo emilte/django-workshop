@@ -1,6 +1,10 @@
 # Use same version as defined in .python-version.
 FROM python:3.11.0-slim-bullseye
 
+SHELL ["/bin/bash", "-c"]
+
+ARG INSTALL=1
+
 # Update Ubuntu Software repository.
 RUN apt update -y \
     && apt upgrade -y \
@@ -29,7 +33,7 @@ RUN python -m pip install --upgrade pip \
 COPY Pipfile Pipfile.lock ./
 
 # Install virtual environment.
-RUN python -m pipenv install --dev --deploy
+RUN if [ "$INSTALL" == "1" ]; then python -m pipenv install --dev --deploy; fi
 
 # Copy rest of the project into image.
 COPY . .
@@ -37,28 +41,5 @@ COPY . .
 # Expose port for django and debugpy.
 EXPOSE 8000
 EXPOSE 5678
-
-# Update static and migration on each startup.
-# ENTRYPOINT ["/app/entrypoint.sh"]
-
-# CMD [ \
-#   "python", \
-#   "-m", \
-#   "pipenv", \
-#   "run", \
-#   "gunicorn", \
-#   "--bind=0.0.0.0:8000", \
-#   "--forwarded-allow-ips=*", \
-#   "--pythonpath=/app", \
-#   "--workers=1", \
-#   "--timeout=120", \
-#   "--worker-class=gthread", \
-#   "--threads=5", \
-#   "--reload", \
-#   "root.wsgi:application" \
-# ]
-
-# This doesn't work, not sure why...
-# CMD [ "pipenv", "run", "gunicorn", "--reload", "root.wsgi:application" ]
 
 CMD [ "pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:8000" ]
