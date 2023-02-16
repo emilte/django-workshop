@@ -41,22 +41,24 @@ EXPOSE 5678
 # Update static and migration on each startup.
 # ENTRYPOINT ["/app/entrypoint.sh"]
 
-CMD [ \
-  "python", \
-  "-m", \
-  "pipenv", \
-  "run", \
-  "gunicorn", \
-  "--bind=0.0.0.0:8000", \
-  "--forwarded-allow-ips=*", \
-  "--pythonpath=/app", \
-  "--workers=1", \
-  "--timeout=120", \
-  "--worker-class=gthread", \
-  "--threads=5", \
-  "--reload", \
-  "root.wsgi:application" \
-]
+# CMD [ \
+#   "python", \
+#   "-m", \
+#   "pipenv", \
+#   "run", \
+#   "gunicorn", \
+#   "--bind=0.0.0.0:8000", \
+#   "--forwarded-allow-ips=*", \
+#   "--pythonpath=/app", \
+#   "--workers=1", \
+#   "--timeout=120", \
+#   "--worker-class=gthread", \
+#   "--threads=5", \
+#   "--reload", \
+#   "root.wsgi:application" \
+# ]
 
 # This doesn't work, not sure why...
 # CMD [ "pipenv", "run", "gunicorn", "--reload", "root.wsgi:application" ]
+
+CMD [ "pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:8000" ]
