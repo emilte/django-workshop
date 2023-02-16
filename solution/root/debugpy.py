@@ -2,8 +2,6 @@ import os
 
 import logging
 
-from .constants import Environment
-
 logger = logging.getLogger('blog.utils')
 
 
@@ -20,8 +18,6 @@ def initialize_debugpy() -> None:
     if os.environ.get('ENABLE_DEBUGPY') == 'yes':
         import debugpy
         # This is okay as long as ENABLE_DEBUGPY only is enabled during development and NOT in production.
-        IS_DOCKER = os.environ.get('ENV') == Environment.DOCKER
-        HOST = '0.0.0.0' if IS_DOCKER else '0.0.0.0'  # nosec: hardcoded_bind_all_interfaces
-        # HOST = '0.0.0.0' if IS_DOCKER else 'localhost'  # nosec: hardcoded_bind_all_interfaces
+        HOST = '0.0.0.0'  # nosec: hardcoded_bind_all_interfaces
         host_port = debugpy.listen((HOST, 5678))  # nosec: hardcoded_bind_all_interfaces
         logger.info(f'Attached debugpy on {host_port}')

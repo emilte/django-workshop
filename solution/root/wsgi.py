@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-from blog.utils.debugpy import initialize_debugpy
+from .debugpy import initialize_debugpy
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'root.settings')
 
