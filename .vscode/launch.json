@@ -19,7 +19,7 @@
       },
       "pathMappings": [
         {
-          "localRoot": "${workspaceFolder}",
+          "localRoot": "${workspaceFolder}/clean",
           "remoteRoot": "/app"
         }
       ]
@@ -36,7 +36,7 @@
       },
       "pathMappings": [
         {
-          "localRoot": "${workspaceFolder}",
+          "localRoot": "${workspaceFolder}/solution",
           "remoteRoot": "/app"
         }
       ]
