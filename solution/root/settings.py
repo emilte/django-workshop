@@ -190,13 +190,12 @@ LOGGING = {
             'null': {
                 'class': 'logging.NullHandler',
             },
-            'console':
-                {
-                    'level': 'DEBUG',
-                    'class': 'logging.StreamHandler',
-                    'formatter': 'pretty',
-                    'filters': ['require_debug_true'],
-                },
+            'console': {
+                'level': 'DEBUG',
+                'class': 'logging.StreamHandler',
+                'formatter': 'pretty',
+                'filters': ['require_debug_true'],
+            },
             'file':
                 {
                     'level': 'INFO',
@@ -229,18 +228,16 @@ LOGGING = {
                 'propagate': True,
                 'level': 'DEBUG',
             },
-            'django.db.backends':
-                {
-                    'handlers': ['sql_file'],
-                    'propagate': False,  # Don't pass up to 'django'.
-                    'level': 'DEBUG',
-                },
-            'django.server':
-                {
-                    'handlers': ['console', 'file'],
-                    'propagate': False,  # Don't pass up to 'django'.
-                    'level': 'INFO',
-                },
+            'django.db.backends': {
+                'handlers': ['sql_file'],
+                'propagate': False,  # Don't pass up to 'django'.
+                'level': 'DEBUG',
+            },
+            'django.server': {
+                'handlers': ['console', 'file'],
+                'propagate': False,  # Don't pass up to 'django'.
+                'level': 'INFO',
+            },
             'django.utils.autoreload':
                 {
                     'handlers': ['console', 'file'],
@@ -267,7 +264,7 @@ DB_NAME = DOCKER_DB_NAME if IS_DOCKER else LOCAL_DB_NAME
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'database' / DB_NAME,
+        'NAME': BASE_DIR / DB_NAME,
     }
 }
 ### End: Database ###

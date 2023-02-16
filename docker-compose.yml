@@ -17,7 +17,6 @@ x-solution-template: &solution-template
   volumes:
     - ./solution:/app
     - ignore_volume:/app/.venv
-    - ignore_volume:/app/database
   env_file:
     - ./solution/.docker.env
   environment:
