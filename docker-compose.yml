@@ -1,7 +1,19 @@
 version: '3.9'
 
+### Templates ###
+
+x-clean-template: &clean-template
+  image: emilte/django-workshop
+  volumes:
+    - ./clean:/app
+    - ignore_volume:/app/.venv
+  env_file:
+    - ./clean/.docker.env
+  environment:
+    - IS_DOCKER=True
+
 x-solution-template: &solution-template
-  build: ./solution # Build in the context of this directory (meaning: use Dockerfile, .dockerignore etc.)
+  image: emilte/django-workshop
   volumes:
     - ./solution:/app
     - ignore_volume:/app/.venv
@@ -11,21 +23,13 @@ x-solution-template: &solution-template
   environment:
     - IS_DOCKER=True
 
-x-clean-template: &clean-template
-  build: ./clean # Build in the context of this directory (meaning: use Dockerfile, .dockerignore etc.)
-  volumes:
-    - ./clean:/app
-    - ignore_volume:/app/.venv
-    - ignore_volume:/app/db.sqlite3
-  env_file:
-    - ./clean/.docker.env
-  environment:
-    - IS_DOCKER=True
+### End: Templates ###
+
+### Services ###
 
 services:
   clean:
     <<: *clean-template
-    # command: pipenv run gunicorn --reload blog.wsgi:application
     depends_on:
       - clean-db
     ports:
@@ -53,6 +57,8 @@ services:
     <<: *solution-template
     entrypoint: ./entrypoint.sh
     command: 'echo "Database ready. Running server on http://localhost:8002"'
+
+### End: Services ###
 
 volumes:
   ignore_volume:
