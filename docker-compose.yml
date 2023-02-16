@@ -3,20 +3,20 @@ version: '3.9'
 ### Templates ###
 
 x-clean-template: &clean-template
-  image: emilte/django-workshop
+  image: emilte/django-workshop:clean
   volumes:
     - ./clean:/app
-    - ignore_volume:/app/.venv
+    - ignore_venv_clean:/app/.venv
   env_file:
     - ./clean/.docker.env
   environment:
     - IS_DOCKER=True
 
 x-solution-template: &solution-template
-  image: emilte/django-workshop
+  image: emilte/django-workshop:solution
   volumes:
     - ./solution:/app
-    - ignore_volume:/app/.venv
+    - ignore_venv_solution:/app/.venv
   env_file:
     - ./solution/.docker.env
   environment:
@@ -60,4 +60,5 @@ services:
 ### End: Services ###
 
 volumes:
-  ignore_volume:
+  ignore_venv_clean:
+  ignore_venv_solution:
