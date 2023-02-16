@@ -72,7 +72,7 @@ Which folders and files are relevant to VScode, what do they mean, and which one
 
 The backend is a Django application, meaning we need to setup a python environment for VSCode.
 
-Command (call inside feide-kp):
+Commands:
 
 ```sh
 PIPENV_VENV_IN_PROJECT=1 # Ensures folder `.venv` appears in project.
@@ -113,20 +113,12 @@ This section motivates the multiple extensions relevant for this project.
 
 List of extensions you should have in this project. Found in [`extensions.json`](/.vscode/extensions.json).
 
-- `fnando.linter` [link](https://marketplace.visualstudio.com/items?itemName=fnando.linter)  
-  idk.
-
 - `ms-python.python` [link](https://marketplace.visualstudio.com/items?itemName=ms-python.python)  
   This project uses Django as framework, which is python based. This extension includes neccessary python language support. It also includes `ms-python.vscode-pylance` [(link)](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) which is the default language server for VSCode. A language server is able to lint in realtime unlike pylint. It also enables helper/suggestion pallette when developing. `visualstudioexptteam.vscodeintellicode` [(link)](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode).
 
-- `orta.vscode-jest` [link](https://marketplace.visualstudio.com/items?itemName=orta.vscode-jest)  
-  idk
 - `batisteo.vscode-django`
   [link](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)  
   Supports Django syntax in templates (.html) and useful snippets.
-
-- `dbaeumer.vscode-eslint` [link](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
-  Code quality in frontend.
 
 - `esbenp.prettier-vscode` [link](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
   Prettier is a formatting tool for frontend configured in this project (see [`prettierrc.js`](/.prettierrc.js)). This extension
@@ -144,35 +136,8 @@ List of extensions you should have in this project. Found in [`extensions.json`]
 
 Optional (nice-to-have) extensions for development. They can be found in [`extensions.recommended.json`](/.vscode/extensions.recommended.json).
 
-- `jock.svg` [link](https://marketplace.visualstudio.com/items?itemName=jock.svg)  
-   This extension enables language support and preview when writing SVG.
-
-- `albert.tabout` [link](https://marketplace.visualstudio.com/items?itemName=albert.tabout)  
-  Tabout makes it easy to "tab out" from brackets `()`, `[]` and `{}`.  
-  Example: `return (True|)` -> `return (True)|`
-
-- `mtxr.sqltools` [link](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)  
-  SQLTools enables us to connect to a database through VSCode. This extension adds a tab in the sidebar which provides overview of existing tables and columns. It is also able to send queries so we can inspect rows in any given table. Because this project uses PostgreSQL database, the PostgreSQL driver for SQLTools is required, `mtxr.sqltools-driver-pg` ([link](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg)). Configuration for connection can be found in [settings.suggestions.json](/.vscode/settings.suggestions.json).
-
-- `eamodio.gitlens` [link](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)  
-  Powerful extension to integrate git version control into VSCode. Highly customizable.
-
 - `mikestead.dotenv` [link](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)  
   Environment-files (.env) have no highlighting by default. This extension fixes that.
-
-- `hediet.vscode-drawio` [link](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)  
-  The popular tool [draw.io](draw.io) (now called [diagrams.net](diagrams.net)) enables us to draw diagrams, e.g. ER-diagram for database and modelling tasks.
-
-- `mrorz.language-gettext` [link](https://marketplace.visualstudio.com/items?itemName=mrorz.language-gettext)  
-  Django supports localization which generates .po files with translations. This extension provides syntax highlight for these files.
-
-- `gitlab.gitlab-workflow` [link](https://marketplace.visualstudio.com/items?itemName=gitlab.gitlab-workflow)  
-  GitLab Workflow integrates the repository directly into VSCode. You will find a 'fox' logo in the sidebar. It's a feature-rich extension. To name a few, it enables autocompletion when editing gitlab config, provides pipeline control, and manages issues and MR's etc.
-  Setup can be read on the extension documentation. TL;DR: you need to create a PAT ([Personal Access Token](https://gitlab.sikt.no/-/profile/personal_access_tokens)) on GitLab to give the extension access to repository. A neccessary setting can be found in [settings.suggestions.json](/.vscode/settings.suggestions.json).
-
-- `yzhang.markdown-all-in-one` [link](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)  
-  Extension which enables preview while writing markdown (.md). It also has a lot of useful commands, snippets and shortcuts.
-  For example enables this extensions auto-generated table of contents used in these docs.
 
 - `ms-azuretools.vscode-docker` [link](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)  
   This project is setup with container-technology with Docker. This extensions integrates Docker functionality.

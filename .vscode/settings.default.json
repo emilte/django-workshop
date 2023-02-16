@@ -1,5 +1,98 @@
 {
+  /// Autosave ///
+  "files.autoSave": "onFocusChange",
+
+  /// linting ///
   "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyArgs": ["--config-file", "mypy.ini", "--no-pretty"],
+  "python.linting.pylintEnabled": false,
+  "python.linting.ignorePatterns": ["**/.venv/**/*", "**/.pyenv/**/*"],
+
+  /// testing ///
+  "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
-  "python.formatting.provider": "yapf"
+
+  /// formatting ///
+  "python.formatting.provider": "yapf",
+  "editor.formatOnSave": true,
+
+  /// Other ///
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "off",
+  "editor.rulers": [120],
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#fff",
+    "titleBar.activeBackground": "#0b4b33",
+    "titleBar.inactiveBackground": "#0b4b33"
+  },
+  // Autocomplete html attributes as well as django tags.
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "editor.bracketPairColorization.enabled": true,
+
+  /// Exclude ///
+  // Lets vscode ignore large folders when loading
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true,
+    "**/venv/**": true,
+    "**/.venv/**": true
+  },
+  // Hide folders from treeview.
+  // They will appear temporary when inspecting source code.
+  "files.exclude": {
+    "**/.git": false,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true,
+    "**/venv/**": false,
+    "**/.venv/**": false
+  },
+  // Large folders you probably don't need to scan on project-search.
+  "search.exclude": {
+    "**/.git": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true,
+    "**/venv/**": true,
+    "**/.venv/**": true
+  }
 }
