@@ -5,9 +5,12 @@
 
 ## Prerequisites
 
-1. `docker`
-2. `docker compose`
-3. `vscode` (optional, but recommended)
+1. `pyenv` (recommended)
+2. `python` (3.11)
+3. `pipenv`
+4. `docker`
+5. `docker compose`
+6. `vscode` (optional, but recommended)
 
 ## Setup
 
@@ -42,6 +45,20 @@ You may stop this afterwards.
 ```
 docker compose up
 ```
+
+4. Install dependencies
+
+```
+cd solution
+```
+
+```
+PIPENV_VENV_IN_PROJECT=1 pipenv install
+```
+
+5. Select interpreter in VSCode
+
+`Cmd + Shift + P` --> `Select interpreter` --> `solution/.venv`
 
 ## Documentation
 
