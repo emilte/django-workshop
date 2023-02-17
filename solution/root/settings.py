@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 AUTH_USER_MODEL = 'blog.User'
 
-IS_DOCKER = os.environ.get('IS_DOCKER', False)
+IS_DOCKER = os.environ.get('IS_DOCKER') == 'yes'
 
 ### Print variables ###
 print(f'=== {BASE_DIR=}')  # noqa: T201
