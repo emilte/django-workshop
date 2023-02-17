@@ -24,7 +24,7 @@ print(f"=== {os.environ['DJANGO_SETTINGS_MODULE']=}")  # noqa: T201
 ### End: Print variables ###
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = os.environ.get('DEBUG', True) == 'yes'
 
 ALLOWED_HOSTS: list[str] = ['*']
 
