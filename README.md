@@ -1,5 +1,11 @@
 # django-workshop
 
+Hi, and welcome to my workshop!
+
+In this workshop, you will learn the basics of Django, and lots of other treats the python environment can provide.
+
+Before we can start though, I need you to do something for me. You see, there are some tools I cannot install for you. Please take a look at the list below and install the required tools 🔧
+
 <br>
 <br>
 
