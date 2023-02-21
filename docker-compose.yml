@@ -10,17 +10,18 @@ x-clean-template: &clean-template
   env_file:
     - ./clean/.docker.env
   environment:
-    - IS_DOCKER=True
+    - IS_DOCKER=yes
 
 x-solution-template: &solution-template
   image: emilte/django-workshop:solution
   volumes:
     - ./solution:/app
     - ignore_venv_solution:/app/.venv
+    - ignore_static_solution:/app/static
   env_file:
     - ./solution/.docker.env
   environment:
-    - IS_DOCKER=True
+    - IS_DOCKER=yes
 
 ### End: Templates ###
 
@@ -62,3 +63,4 @@ services:
 volumes:
   ignore_venv_clean:
   ignore_venv_solution:
+  ignore_static_solution:
