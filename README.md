@@ -75,6 +75,12 @@ cd solution
 PIPENV_VENV_IN_PROJECT=1 pyenv exec python -m pipenv install
 ```
 
+If you want to try again, you can remove the environment with:
+
+```
+pyenv exec python -m pipenv --rm
+```
+
 <br>
 <br>
 
