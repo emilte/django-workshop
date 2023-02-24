@@ -21,7 +21,7 @@ See [prerequisites](/documentation/prerequisites.md).
 ### 1. Locate directory you want to clone project.
 
 ```
-git clone git@github.com:emilte/django-workshop.git;
+git clone git@github.com:emilte/django-workshop.git; cd django-workshop
 ```
 
 <br>
@@ -30,9 +30,9 @@ git clone git@github.com:emilte/django-workshop.git;
 ### 2. Copy environment files.
 
 ```
-cp .vscode/settings.default.json .vscode/settings.json
-cp clean/.docker.example.env clean/.docker.env
-cp solution/.docker.example.env solution/.docker.env
+cp .vscode/settings.default.json .vscode/settings.json;
+cp clean/.docker.example.env clean/.docker.env;
+cp solution/.docker.example.env solution/.docker.env;
 ```
 
 <br>
