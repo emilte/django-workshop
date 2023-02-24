@@ -10,19 +10,37 @@ https://docs.djangoproject.com/en/4.1/
 <hr>
 <br>
 
-## Step 1: Install django
+## Step 1: Enter the container
+
+Start a shell (bash) within container clean.
+See [Useful commands](../useful-commands.md)
+
+<details>
+<summary>Solution</summary>
+
+To enter container (from root of project on host machine):
+
+```
+docker compose run clean bash
+```
+
+</details>
+
+<br>
+<br>
+
+## Step 2: Install django
 
 Install django through `pipenv` inside the container `clean`.
+This container has `pipenv` installed already.
 
 See [Useful commands](../useful-commands.md)
 
 <details>
 <summary>Solution</summary>
 
-To create app (from root of project on host machine):
-
 ```
-docker compose exec clean pipenv run python manage.py startapp blog
+pipenv install django
 ```
 
 </details>
@@ -42,7 +60,7 @@ Resource: https://docs.djangoproject.com/en/4.1/intro/tutorial01/#creating-a-pro
 To create project (from root of project on host machine):
 
 ```
-docker compose exec clean pipenv run python manage.py startapp blog
+docker compose run clean pipenv run python manage.py startproject root .
 ```
 
 </details>
