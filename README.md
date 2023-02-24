@@ -30,9 +30,9 @@ git clone git@github.com:emilte/django-workshop.git; cd django-workshop
 ### 2. Copy environment files.
 
 ```
-cp .vscode/settings.default.json .vscode/settings.json;
-cp clean/.docker.example.env clean/.docker.env;
-cp solution/.docker.example.env solution/.docker.env;
+cp .vscode/settings.default.json .vscode/settings.json
+cp clean/.docker.example.env clean/.docker.env
+cp solution/.docker.example.env solution/.docker.env
 ```
 
 <br>
