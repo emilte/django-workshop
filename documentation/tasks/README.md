@@ -2,7 +2,8 @@
 
 These tasks are not dependent on one another. Choose the path you are interested in 😃
 
-- [Blog project](debugger.md) (Django basics with database and models)
+- [Start project](startproject.md)
+- [Blog project](blog.md) (Django basics with database and models)
 - [Debugger](debugger.md)
 - [Formatter (yapf)](formatter.md)
 - [Linter (flake8)](linter.md)
