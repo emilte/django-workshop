@@ -4,19 +4,17 @@ Hi, and welcome to my workshop!
 
 In this workshop, you will learn the basics of Django, and lots of other treats the python environment can provide.
 
-Before we can start though, I need you to do something for me. You see, there are some tools I cannot install for you. Please take a look at the list below and install the required tools 🔧
+Before we can start though, I need you to do something for me. You see, there are some tools I cannot install for you. Please take a look at the list in [prerequisites](#prerequisites) below and install the required tools 🔧
 
 <br>
 <br>
 
 ## Prerequisites
 
-1. `pyenv` (recommended)
-2. `python` (3.11) (only needed if you skip pyenv)
-3. `pipenv` (sub-package of python)
-4. `docker`
-5. `docker compose`
-6. `vscode` (optional, but recommended)
+See [prerequisites](/documentation/prerequisites.md).
+
+<br>
+<br>
 
 ## Setup
 
@@ -27,6 +25,7 @@ git clone git@github.com:emilte/django-workshop.git;
 ```
 
 <br>
+<br>
 
 2. Copy environment files.
 
@@ -36,13 +35,19 @@ cp clean/.docker.example.env clean/.docker.env
 cp solution/.docker.example.env solution/.docker.env
 ```
 
+<br>
+<br>
+
 3. Build project
 
 ```
 docker compose build
 ```
 
-3. Run project for initial setup
+<br>
+<br>
+
+4. Run project for initial setup
 
 It's expected to display errors for `clean` container.
 This is the container you are about to create a django project inside.
@@ -52,19 +57,31 @@ You may stop this afterwards.
 docker compose up
 ```
 
-4. Install dependencies
+<br>
+<br>
+
+5. Install dependencies (optional)
+
+This step is only to enhance the VSCode experience where it can recognise Django, enable formatter, linters etc...
 
 ```
 cd solution
 ```
 
+> `pipenv` will recognise dependencies automatically from [Pipfile](/solution/Pipfile).
+> `PIPENV_VENV_IN_PROJECT=1` will ensure that the environment is installed within this folder.
+
 ```
-PIPENV_VENV_IN_PROJECT=1 pipenv install
+PIPENV_VENV_IN_PROJECT=1 pyenv exec python -m pipenv install
 ```
 
-5. Select interpreter in VSCode
+<br>
+<br>
 
-`Cmd + Shift + P` --> `Select interpreter` --> `solution/.venv`
+1. Select interpreter in VSCode
+
+`Cmd + Shift + P` --> `Select interpreter` --> `+ Enter interpreter path`
+Write `solution/.venv` and hit `Enter`.
 
 ## Documentation
 
