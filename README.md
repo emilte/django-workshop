@@ -18,7 +18,7 @@ See [prerequisites](/documentation/prerequisites.md).
 
 ## Setup
 
-### 1. Locate directory you want to clone project.
+### 1. Locate directory you want to have the project, clone project and navigate into it.
 
 ```
 git clone git@github.com:emilte/django-workshop.git; cd django-workshop
