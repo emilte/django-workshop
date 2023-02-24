@@ -18,7 +18,7 @@ See [prerequisites](/documentation/prerequisites.md).
 
 ## Setup
 
-1. Locate directory you want to clone project.
+### 1. Locate directory you want to clone project.
 
 ```
 git clone git@github.com:emilte/django-workshop.git;
@@ -27,7 +27,7 @@ git clone git@github.com:emilte/django-workshop.git;
 <br>
 <br>
 
-2. Copy environment files.
+### 2. Copy environment files.
 
 ```
 cp .vscode/settings.default.json .vscode/settings.json
@@ -38,7 +38,7 @@ cp solution/.docker.example.env solution/.docker.env
 <br>
 <br>
 
-3. Build project
+### 3. Build project
 
 ```
 docker compose build
@@ -47,20 +47,23 @@ docker compose build
 <br>
 <br>
 
-4. Run project for initial setup
+### 4. Run project for initial setup
 
 It's expected to display errors for `clean` container.
 This is the container you are about to create a django project inside.
-You may stop this afterwards.
 
 ```
 docker compose up
 ```
 
+The `solution` server is now running on [http://localhost:8002](http://localhost:8002).  
+You may browse the admin panel on [http://localhost:8002](http://localhost:8002).
+Credentials can be found in [solution/.docker.env](/solution/.docker.env)
+
 <br>
 <br>
 
-5. Install dependencies (optional)
+### 5. Install dependencies (optional)
 
 This step is only to enhance the VSCode experience where it can recognise Django, enable formatter, linters etc...
 
@@ -84,10 +87,14 @@ pyenv exec python -m pipenv --rm
 <br>
 <br>
 
-1. Select interpreter in VSCode
+### 6. Select interpreter in VSCode
 
 `Cmd + Shift + P` --> `Select interpreter` --> `+ Enter interpreter path`
+
 Write `solution/.venv` and hit `Enter`.
+
+<br>
+<br>
 
 ## Documentation
 

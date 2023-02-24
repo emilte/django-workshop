@@ -32,7 +32,7 @@ docker compose run clean bash
 
 ## Step 2: Install django
 
-Install django through `pipenv` inside the container `clean`.
+Install django through `pipenv` inside the container `clean`.  
 This container has `pipenv` installed already.
 
 See [Useful commands](../useful-commands.md)
@@ -58,10 +58,32 @@ Resource: https://docs.djangoproject.com/en/4.1/intro/tutorial01/#creating-a-pro
 <details>
 <summary>Solution</summary>
 
-To create project (from root of project on host machine):
-
 ```
 pipenv run django-admin startproject root .
+```
+
+> `django-admin` is only needed before starting a project.  
+> It created a file named `manage.py` which we will use from now on.
+
+</details>
+
+<br>
+<br>
+
+## Step 4: Create a superuser
+
+Django comes with a builtin admin-panel. To login after you restart the server, you first need a user.  
+Create a new user through `manage.py`.
+
+See [Useful commands](../useful-commands.md)
+
+<details>
+<summary>Solution</summary>
+
+Run and follow the instructions:
+
+```
+pipenv run python manage.py createsuperuser
 ```
 
 </details>
@@ -69,7 +91,7 @@ pipenv run django-admin startproject root .
 <br>
 <br>
 
-## Step 4: Restart servers
+## Step 5: Restart servers
 
 You can now exit this container. Docker compose will start it for you.  
 Stop the running servers you started earlier with `docker compose up` and rerun the command.  
