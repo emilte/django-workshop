@@ -15,7 +15,7 @@ RUN apt update -y \
 ### Environment variables. ###
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-ENV PIPENV_VENV_IN_PROJECT=1
+# ENV PIPENV_VENV_IN_PROJECT=1
 ENV IS_DOCKER=yes
 # Docker should configure env vars in '.docker.env'.
 ENV PIPENV_DONT_LOAD_ENV=1
