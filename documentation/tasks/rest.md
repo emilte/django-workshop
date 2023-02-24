@@ -1,4 +1,6 @@
-# Django REST framework
+/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [REST api](rest.md)
+
+# Task: Django REST framework
 
 In this task you will create a rest api for a model.
 You can also protect the endpoint behind authentication.
@@ -135,3 +137,8 @@ class BlogViewSet(ModelViewSet):
 ```
 
 </details>
+
+<br>
+<br>
+
+👈 Back to [Tasks](/documentation/tasks/README.md)

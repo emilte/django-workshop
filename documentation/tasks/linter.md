@@ -1,8 +1,13 @@
-# Linter
+/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
+
+# Task: Linter
 
 In this task, you will install and configure a linter to your project. The package to use in this task is `flake8`, a lightweight and fast linter that can cover most of your needs.
 
 The project is already setup with a config file [.flake8](/.flake8).
+
+<br>
+<br>
 
 ## Install linter
 
@@ -33,3 +38,8 @@ Enable flake8 in VSCode (or other editor).
 Point to the config file [.flake8](/.flake8).
 
 > List of rules https://lintlyci.github.io/Flake8Rules/
+
+<br>
+<br>
+
+👈 Back to [Tasks](/documentation/tasks/README.md)

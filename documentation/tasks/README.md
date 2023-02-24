@@ -1,3 +1,5 @@
+/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md)
+
 # Tasks
 
 These tasks are not dependent on one another. Choose the path you are interested in 😃
@@ -11,3 +13,8 @@ These tasks are not dependent on one another. Choose the path you are interested
 - [Rest Framework API](rest.md)
 - [Security](security.md)
 - [Type checker (mypy)](typing.md)
+
+<br>
+<br>
+
+👈 Back to [Documentation](/documentation/README.md)

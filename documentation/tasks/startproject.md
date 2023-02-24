@@ -1,3 +1,5 @@
+/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
+
 # Start project
 
 In this task you will create a django project from scratch.
@@ -98,3 +100,6 @@ Stop the running servers you started earlier with `docker compose up` and rerun 
 This time, `clean` should not fail, and will be running on [http://localhost:8001](http://localhost:8001).
 
 <br>
+<br>
+
+👈 Back to [Tasks](/documentation/tasks/README.md)

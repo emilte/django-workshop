@@ -1,3 +1,5 @@
+/ [Documentation](/documentation/README.md) / [Prerequisites](prerequisites.md)
+
 # Prerequisites
 
 1. `pyenv` (recommended)

@@ -1,4 +1,6 @@
-# Blog application
+/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Blog application](blog.md)
+
+# Task: Blog application
 
 In this task you will be the architect of the backend for a blog application.
 
@@ -7,7 +9,7 @@ In this task you will be the architect of the backend for a blog application.
 
 <br>
 
-Table of content:
+Table of contents:
 
 - [Step 1: Initialize application](#step-1-initialize-application)
 - [Step 2: Add app to project](#step-2-add-app-to-project)
@@ -153,3 +155,8 @@ class Author(models.Model):
 ```
 
 </details>
+
+<br>
+<br>
+
+👈 Back to [Tasks](/documentation/tasks/README.md)

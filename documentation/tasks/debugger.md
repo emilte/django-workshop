@@ -1,3 +1,5 @@
+/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Debugger](startproject.md)
+
 # Task: Debugger
 
 This section will instruct you on how to attach a debugger to your container.  
@@ -61,3 +63,8 @@ Select the one for `clean`, the editor should now be orange.
 ## 4. Set breakpoint
 
 Set a breakpoint 🔴 on a line of code you want to inspect. Preferably inside a View so that you can trigger a request to that endpoint.
+
+<br>
+<br>
+
+👈 Back to [Tasks](/documentation/tasks/README.md)
