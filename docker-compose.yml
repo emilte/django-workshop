@@ -30,33 +30,16 @@ x-solution-template: &solution-template
 services:
   clean:
     <<: *clean-template
-    depends_on:
-      - clean-db
     ports:
       - '8001:8000' # Quotes are required. django
       - '6001:5678' # Quotes are required. debugpy
 
-  # One off command to setup db when starting 'clean'.
-  clean-db:
-    <<: *clean-template
-    entrypoint: ./entrypoint.sh
-    command: 'echo "Database ready. Running server on http://localhost:8001"'
-
   solution:
     <<: *solution-template
     # command: pipenv run gunicorn --reload blog.wsgi:application
-    depends_on:
-      - solution-db
-    command: pipenv run python manage.py runserver 0.0.0.0:8000
     ports:
       - '8002:8000' # Quotes are required. django
       - '6002:5678' # Quotes are required. debugpy
-
-  # One off command to setup db when starting 'solution'.
-  solution-db:
-    <<: *solution-template
-    entrypoint: ./entrypoint.sh
-    command: 'echo "Database ready. Running server on http://localhost:8002"'
 
 ### End: Services ###
 

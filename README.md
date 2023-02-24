@@ -12,8 +12,8 @@ Before we can start though, I need you to do something for me. You see, there ar
 ## Prerequisites
 
 1. `pyenv` (recommended)
-2. `python` (3.11)
-3. `pipenv`
+2. `python` (3.11) (only needed if you skip pyenv)
+3. `pipenv` (sub-package of python)
 4. `docker`
 5. `docker compose`
 6. `vscode` (optional, but recommended)

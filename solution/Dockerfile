@@ -16,6 +16,7 @@ RUN apt update -y \
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PIPENV_VENV_IN_PROJECT=1
+ENV IS_DOCKER=yes
 # Docker should configure env vars in '.docker.env'.
 ENV PIPENV_DONT_LOAD_ENV=1
 
@@ -41,5 +42,8 @@ COPY . .
 # Expose port for django and debugpy.
 EXPOSE 8000
 EXPOSE 5678
+
+# Update static and migration on each startup.
+ENTRYPOINT ["/app/entrypoint.sh"]
 
 CMD [ "pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:8000" ]
