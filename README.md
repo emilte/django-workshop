@@ -93,7 +93,7 @@ Credentials can be found in [solution/.docker.env](/solution/.docker.env)
 
 ### 4. Install dependencies (optional)
 
-This step is only to enhance the VSCode experience where it can recognise Django, enable formatter, linters etc...
+This step is only to enhance the VSCode experience where it can recognise Django, enable formatter, linters etc.
 
 ```
 cd solution
@@ -103,13 +103,7 @@ cd solution
 > `PIPENV_VENV_IN_PROJECT=1` will ensure that the environment is installed within this folder.
 
 ```
-PIPENV_VENV_IN_PROJECT=1 pyenv exec python -m pipenv install
-```
-
-If you want to try again, you can remove the environment with:
-
-```
-pyenv exec python -m pipenv --rm
+PIPENV_VENV_IN_PROJECT=1 pyenv exec pipenv install --python 3.11
 ```
 
 <br>
