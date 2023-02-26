@@ -10,7 +10,6 @@
   "python.linting.ignorePatterns": ["**/.venv/**/*", "**/.pyenv/**/*"],
 
   /// testing ///
-  "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
 
   /// formatting ///
@@ -31,68 +30,5 @@
     "django-html": "html"
   },
   "files.defaultLanguage": "${activeEditorLanguage}",
-  "editor.bracketPairColorization.enabled": true,
-
-  /// Exclude ///
-  // Lets vscode ignore large folders when loading
-  "files.watcherExclude": {
-    "**/.git": true,
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/bower_components": true,
-    "**/dist/**": true,
-    "**/log/**": true,
-    "**/logs/**": true,
-    "**/.fdk/**": true,
-    "**/venv/**": true,
-    "**/.venv/**": true
-  },
-  // Hide folders from treeview.
-  // They will appear temporary when inspecting source code.
-  "files.exclude": {
-    "**/.git": false,
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/bower_components": true,
-    "**/dist/**": true,
-    "**/log/**": true,
-    "**/logs/**": true,
-    "**/.fdk/**": true,
-    "**/venv/**": false,
-    "**/.venv/**": false
-  },
-  // Large folders you probably don't need to scan on project-search.
-  "search.exclude": {
-    "**/.git": true,
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/bower_components": true,
-    "**/dist/**": true,
-    "**/log/**": true,
-    "**/logs/**": true,
-    "**/.fdk/**": true,
-    "**/venv/**": true,
-    "**/.venv/**": true
-  }
+  "editor.bracketPairColorization.enabled": true
 }
