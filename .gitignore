@@ -21,6 +21,8 @@ static
 *.env
 !*.example.env
 env/
+venv/
+.venv/
 
 # local-history
 .history/
