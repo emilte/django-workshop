@@ -1,8 +1,8 @@
 [Documentation](/documentation/README.md) / [vscode](vscode.md)
 
-[<- Back to: README](README.md)
+# VSCode explained
 
-# VSCode à la @emilte
+This is not a task, just extra context information about the VSCode configurations.
 
 <hr>
 
@@ -10,11 +10,8 @@
 
 - [Table of contents](#table-of-contents)
 - [Files explained](#files-explained)
-- [Local setup](#local-setup)
-  - [Virtual environment](#virtual-environment)
 - [Extensions explained](#extensions-explained)
   - [Default](#default)
-  - [Recommended](#recommended)
 
 <hr>
 <br>
@@ -34,40 +31,12 @@ Which folders and files are relevant to VScode, what do they mean, and which one
 - `launch.json`  
   Contains configurations for debugging.
 
-- `settings.json`  
-  Contains workspace settings for VSCode and extensions. Note that workspace settings takes precedens over user-settings.
-  This file is recognised by VSCode and is to be configured to your liking. That's why this file is intentionally excluded from version control.
-
 - `settings.default.json`  
-  Contains common project-specific settings. Copy these settings into `settings.json`.
+  Contains common project-specific settings. Not recognised by VSCode, so these settings must be copied into `settings.json` to take effect.
 
-<br><br>
-
-## Local setup
-
-> Make sure you have downloaded a version of VSCode compatible with your device.  
-> MAC: universal or M1.  
-> Windows: ...  
-> Linux: ...
-
-### Virtual environment
-
-The backend is a Django application, meaning we need to setup a python environment for VSCode.
-
-Commands:
-
-```sh
-PIPENV_VENV_IN_PROJECT=1 # Ensures folder `.venv` appears in project.
-pyenv install # Install python version defined in `.python-version`.
-python -m pip install pipenv # Install `pipenv`.
-python -m pipenv install -r requirements-frozen.txt # Install dependencies.
-python -m pipenv install -r requirements/development.txt # Install dependencies.
-
-```
-
-VSCode should now recognize the environment. If not, you have to manually select interpreter (hint: `CMD+Shift+P`).
-
-<br>
+- `settings.json`  
+  Contains workspace settings for VSCode and extensions. Note that workspace settings take precedens over user settings.
+  This file is recognised by VSCode and is to be configured to your liking. For this reason, the file is intentionally excluded from version control.
 
 <br><br>
 
@@ -88,27 +57,9 @@ List of extensions you should have in this project. Found in [`extensions.json`]
   [link](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)  
   Supports Django syntax in templates (.html) and useful snippets.
 
-- `esbenp.prettier-vscode` [link](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)  
-  Prettier is a formatting tool for frontend configured in this project (see [`prettierrc.js`](/.prettierrc.js)). This extension
-
 - `editorconfig.editorconfig`
   [link](https://marketplace.visualstudio.com/items?itemName=editorconfig.editorconfig)  
   [EditorConfig](https://editorconfig.org/) configures consistent coding styles across various editors and filetypes.
 
 - `visualstudioexptteam.vscodeintellicode` [link](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode)  
   Used in conjunction with `pylance` to enable smart suggestions during development.
-
-<br>
-
-### Recommended
-
-Optional (nice-to-have) extensions for development. They can be found in [`extensions.recommended.json`](/.vscode/extensions.recommended.json).
-
-- `mikestead.dotenv` [link](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)  
-  Environment-files (.env) have no highlighting by default. This extension fixes that.
-
-- `ms-azuretools.vscode-docker` [link](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)  
-  This project is setup with container-technology with Docker. This extensions integrates Docker functionality.
-
-- `ms-vscode-remote.remote-containers` [link](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)  
-  Enables VSCode to attach to a running container. Useful for debugging and developing without having to install any dependencies locally.
