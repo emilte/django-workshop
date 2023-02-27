@@ -89,7 +89,7 @@ docker compose up
 ```
 
 The `solution` server is now running on [http://localhost:8002](http://localhost:8002).  
-You may browse the admin panel on [http://localhost:8002](http://localhost:8002).
+You may browse the [admin panel](http://localhost:8002/admin).  
 Credentials can be found in [solution/.docker.env](/solution/.docker.env)
 
 <br>
