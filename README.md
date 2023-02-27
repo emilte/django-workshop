@@ -19,9 +19,13 @@ The project was made primarily to run in docker, but is compatible with local se
   - [Step 1: Clone project](#step-1-clone-project)
   - [Step 2: Copy environment files](#step-2-copy-environment-files)
   - [Step 3: Run project](#step-3-run-project)
-  - [4. Install dependencies (optional)](#4-install-dependencies-optional)
-  - [5. Select interpreter in VSCode](#5-select-interpreter-in-vscode)
+  - [Step 4: Install dependencies (optional)](#step-4-install-dependencies-optional)
+  - [Step 5: Select interpreter in VSCode](#step-5-select-interpreter-in-vscode)
 - [Documentation](#documentation)
+
+<br>
+<hr>
+<br>
 
 ## Prerequisites
 
@@ -91,7 +95,7 @@ Credentials can be found in [solution/.docker.env](/solution/.docker.env)
 <br>
 <br>
 
-### 4. Install dependencies (optional)
+### Step 4: Install dependencies (optional)
 
 This step is only to enhance the VSCode experience where it can recognise Django, enable formatter, linters etc.
 
@@ -109,7 +113,7 @@ PIPENV_VENV_IN_PROJECT=1 pyenv exec pipenv install --python 3.11
 <br>
 <br>
 
-### 5. Select interpreter in VSCode
+### Step 5: Select interpreter in VSCode
 
 `Cmd + Shift + P` --> `Select interpreter` --> `+ Enter interpreter path`
 
