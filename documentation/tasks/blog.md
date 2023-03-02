@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Blog application](blog.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Blog application](blog.md)
 
 # Task: Blog application
 

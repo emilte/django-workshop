@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Useful commands](useful-commands.md)
+/ [Menu](/documentation/README.md) / [Useful commands](useful-commands.md)
 
 # Useful commands
 

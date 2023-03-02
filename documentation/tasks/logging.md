@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Logging](logging.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Logging](logging.md)
 
 # Tast: Logging
 

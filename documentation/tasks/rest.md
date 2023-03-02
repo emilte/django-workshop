@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [REST api](rest.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [REST api](rest.md)
 
 # Task: Django REST framework
 

@@ -1,8 +1,8 @@
-/ [documentation](/documentation/README.md) /
+/ [Menu](/documentation/README.md) /
 
 # Menu
 
-- [Tasks](tasks/README.md)
-- [Prerequisites](prerequisites.md)
-- [List of useful commands](useful-commands.md)
-- [VSCode setup](vscode.md) (for interested readers)
+- [**Prerequisites**](prerequisites.md)
+- [**Tasks**](tasks/README.md)
+- [**Useful commands**](useful-commands.md)
+- [VSCode details](vscode.md) (for interested readers)

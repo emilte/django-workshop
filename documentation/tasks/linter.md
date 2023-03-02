@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
 
 # Task: Linter
 
