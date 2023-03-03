@@ -14,7 +14,15 @@ There are several configurations, for example always two empty lines before a cl
 <br>
 <br>
 
-# Step 1: Install yapf
+Table of contents:
+
+- [Step 1: Install yapf](#step-1-install-yapf)
+- [Step 2: Setup editor](#step-2-setup-editor)
+
+<br>
+<br>
+
+## Step 1: Install yapf
 
 Install `yapf` through `pipenv` from root of project on host machine.
 
@@ -51,5 +59,8 @@ Add this to file [/.vscode/settings.json](/.vscode/settings.json):
 ```
 
 </details>
+
+<br>
+<br>
 
 👈 Back to [Tasks](/documentation/tasks/README.md)

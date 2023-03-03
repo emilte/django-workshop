@@ -5,4 +5,9 @@
 <br>
 <br>
 
+Table of contents:
+
+<br>
+<br>
+
 👈 Back to [Tasks](/documentation/tasks/README.md)

@@ -10,6 +10,11 @@ You can also protect the endpoint behind authentication.
 > You need a model to provide a rest api for it.
 > If you want to proceed without the blog task, create a model in step 0.
 
+<br>
+<br>
+
+Table of contents:
+
 - [Step 0: Create a model](#step-0-create-a-model)
 - [Step 1: Install djangorestframework](#step-1-install-djangorestframework)
 - [Step 2: Create a ModelSerializer](#step-2-create-a-modelserializer)

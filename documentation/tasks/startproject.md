@@ -9,7 +9,17 @@ Django official documentation:
 https://docs.djangoproject.com/en/4.1/
 
 <br>
-<hr>
+<br>
+
+Table of contents:
+
+- [Step 1: Enter the container](#step-1-enter-the-container)
+- [Step 2: Install django](#step-2-install-django)
+- [Step 3: Start project](#step-3-start-project)
+- [Step 4: Create a superuser](#step-4-create-a-superuser)
+- [Step 5: Restart servers](#step-5-restart-servers)
+
+<br>
 <br>
 
 ## Step 1: Enter the container

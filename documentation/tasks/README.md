@@ -2,7 +2,7 @@
 
 # Tasks
 
-These tasks are not dependent on one another. Choose the path you are interested in 😃
+Choose the path you are interested in 😃
 
 - [Start project](startproject.md)
 - [Blog project](blog.md) (Django basics with database and models)
@@ -17,4 +17,4 @@ These tasks are not dependent on one another. Choose the path you are interested
 <br>
 <br>
 
-👈 Back to [Documentation](/documentation/README.md)
+👈 Back to [Menu](/documentation/README.md)
