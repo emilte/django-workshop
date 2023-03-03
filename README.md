@@ -81,8 +81,8 @@ The workshop is setup with two docker containers I will reference throughout the
 - The `clean` container is for the moment completely empty. This is where you will start your django project.
 - The `solution` container is fully spec'ed with most of the tools I like to use on my own projects. It serves as an inspiration during your tasks as well as giving you an instant feeling as to what Django can provide.
 
-> The command is expected to display errors for the `clean` container.
-> This is because you have not created a project inside it yet.
+> This command is expected to display errors for the `clean` container.  
+> There isn't a project inside it yet, but you will make one pretty soon 😉
 
 ```
 docker compose up
@@ -103,7 +103,7 @@ This step is only to enhance the VSCode experience where it can recognise Django
 cd solution
 ```
 
-> `pipenv` will recognise dependencies automatically from [Pipfile](/solution/Pipfile).
+> `pipenv` will recognise dependencies automatically from [Pipfile](/solution/Pipfile).  
 > `PIPENV_VENV_IN_PROJECT=1` will ensure that the environment is installed within this folder.
 
 ```

@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Debugger](startproject.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Debugger](startproject.md)
 
 # Task: Debugger
 
@@ -15,7 +15,17 @@ NOTE:
 <br>
 <br>
 
-## 1. Install debugger
+Table of contents:
+
+- [Step 1: Install debugger](#step-1-install-debugger)
+- [Step 2: Initialize debugger](#step-2-initialize-debugger)
+- [Step 3: Start VSCode debug session](#step-3-start-vscode-debug-session)
+- [Step 4: Set breakpoint](#step-4-set-breakpoint)
+
+<br>
+<br>
+
+## Step 1: Install debugger
 
 Install `debugpy` inside the virtual environment of container `clean`.
 
@@ -33,7 +43,7 @@ docker compose exec clean pipenv run
 <br>
 <br>
 
-## 2. Initialize debugger
+## Step 2: Initialize debugger
 
 Attach a debugger to the django server.
 Use host `0.0.0.0` with post `5678`.
@@ -49,7 +59,7 @@ See [debugpy.py](/solution/root/debugpy.py) and [wsgi.py](/solution/root/wsgi.py
 <br>
 <br>
 
-## 3. Start VSCode debug session
+## Step 3: Start VSCode debug session
 
 Go to the debug tab in VSCode in the left sidebar.
 At the top you can select which configuration you want to use (see [launch.json](/.vscode/launch.json)).
@@ -60,7 +70,7 @@ Select the one for `clean`, the editor should now be orange.
 <br>
 <br>
 
-## 4. Set breakpoint
+## Step 4: Set breakpoint
 
 Set a breakpoint 🔴 on a line of code you want to inspect. Preferably inside a View so that you can trigger a request to that endpoint.
 

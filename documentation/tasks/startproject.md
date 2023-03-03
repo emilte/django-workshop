@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
 
 # Start project
 
@@ -9,7 +9,17 @@ Django official documentation:
 https://docs.djangoproject.com/en/4.1/
 
 <br>
-<hr>
+<br>
+
+Table of contents:
+
+- [Step 1: Enter the container](#step-1-enter-the-container)
+- [Step 2: Install django](#step-2-install-django)
+- [Step 3: Start project](#step-3-start-project)
+- [Step 4: Restart servers](#step-4-restart-servers)
+- [Step 5: Create a superuser](#step-5-create-a-superuser)
+
+<br>
 <br>
 
 ## Step 1: Enter the container
@@ -72,32 +82,35 @@ pipenv run django-admin startproject root .
 <br>
 <br>
 
-## Step 4: Create a superuser
+## Step 4: Restart servers
+
+You can now exit this container. Docker compose will start it for you.  
+Stop the running servers you started earlier with `docker compose up` and re-run the command.  
+This time, `clean` should not fail, and will be running on [http://localhost:8001](http://localhost:8001).
+
+<br>
+<br>
+
+## Step 5: Create a superuser
 
 Django comes with a builtin admin-panel. To login after you restart the server, you first need a user.  
 Create a new user through `manage.py`.
 
 See [Useful commands](../useful-commands.md)
 
+Afterwards you may visit the admin-panel on [http://localhost:8001/admin](http://localhost:8001/admin).
+
 <details>
 <summary>Solution</summary>
 
-Run and follow the instructions:
+From root of project on host machine:  
+Run and follow the instructions.
 
 ```
-pipenv run python manage.py createsuperuser
+docker compose exec clean pipenv run python manage.py createsuperuser
 ```
 
 </details>
-
-<br>
-<br>
-
-## Step 5: Restart servers
-
-You can now exit this container. Docker compose will start it for you.  
-Stop the running servers you started earlier with `docker compose up` and rerun the command.  
-This time, `clean` should not fail, and will be running on [http://localhost:8001](http://localhost:8001).
 
 <br>
 <br>

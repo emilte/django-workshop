@@ -1,4 +1,4 @@
-[Documentation](/documentation/README.md) / [vscode](vscode.md)
+/ [Documentation](/documentation/README.md) / [vscode](vscode.md)
 
 # VSCode explained
 

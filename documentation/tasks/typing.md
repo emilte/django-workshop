@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Typing](typing.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Typing](typing.md)
 
 # Task: Typing
 

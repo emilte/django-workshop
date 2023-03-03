@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [REST api](rest.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [REST api](rest.md)
 
 # Task: Django REST framework
 
@@ -10,10 +10,16 @@ You can also protect the endpoint behind authentication.
 > You need a model to provide a rest api for it.
 > If you want to proceed without the blog task, create a model in step 0.
 
+<br>
+<br>
+
+Table of contents:
+
 - [Step 0: Create a model](#step-0-create-a-model)
 - [Step 1: Install djangorestframework](#step-1-install-djangorestframework)
 - [Step 2: Create a ModelSerializer](#step-2-create-a-modelserializer)
 - [Step 3: Create a ModelViewSet](#step-3-create-a-modelviewset)
+- [Step 4: Create an endpoint](#step-4-create-an-endpoint)
 
 <br>
 <hr>
@@ -35,7 +41,7 @@ See [official documentation](https://docs.djangoproject.com/en/4.1/topics/db/mod
 
 from django.db import models
 
-class Blog(models.Model):
+class BlogPost(models.Model):
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     hidden = models.BooleanField()
@@ -84,22 +90,22 @@ It will create data as json, ready to send back as an http response.
 
 In it's simplest form, allow all fields.
 
+See [ModelSerializer](https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers)
+
 <details>
 <summary>Solution</summary>
-
-See [ModelSerializer](https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers)
 
 ```py
 # blog/serializers.py
 
 from rest_framework import serializers
 
-from blog.models import Blog
+from blog.models import BlogPost
 
-class BlogSerializer(serializers.ModelSerializer):
+class BlogPostSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Blog
+        model = BlogPost
         fields = '__all__'
 ```
 
@@ -118,22 +124,56 @@ Attributes to specify:
 - `serializer_class`
 - `queryset`
 
+See [ModelViewSet](https://www.django-rest-framework.org/api-guide/viewsets/#modelviewset)
+
 <details>
 <summary>Solution</summary>
-
-See [ModelSerializer](https://www.django-rest-framework.org/tutorial/1-serialization/#using-modelserializers)
 
 ```py
 # blog/views.py
 
 from rest_framework.viewsets import ModelViewSet
 
-from blog.models import Blog
-from blog.serializers import BlogSerializer
+from blog.models import BlogPost
+from blog.serializers import BlogPostSerializer
 
-class BlogViewSet(ModelViewSet):
-    serializer_class = BlogSerializer
-    queryset = Blog.objects.all()
+class BlogPostViewSet(ModelViewSet):
+    serializer_class = BlogPostSerializer
+    queryset = BlogPost.objects.all()
+```
+
+</details>
+
+<br>
+<br>
+
+## Step 4: Create an endpoint
+
+You haven't made an url to use the api yet.
+
+In [blog](/clean/root/settings.py) you can see that the setting `ROOT_URLCONF` says the file [/root/urls.py](/clean/root/urls.py) is the main entrypoint when receiving a request.  
+Make sure to forward all traffic beginning with `/blog/` to your app.  
+(Hint: read the docstring in [/root/urls.py](/clean/root/urls.py))
+
+Afterwards create a path for your api `BlogPostViewSet` in `blog/urls.py`.  
+See: https://www.django-rest-framework.org/api-guide/routers/#usage
+
+<details>
+<summary>Solution</summary>
+
+```py
+# blog/urls.py
+
+from rest_framework import routers
+from .views import BlogPostViewSet
+
+router = routers.SimpleRouter()
+
+router.register('blog-post', BlogPostViewSet)
+
+# The variable 'urlpatterns' is recognised by django.
+urlpatterns = router.urls
+
 ```
 
 </details>

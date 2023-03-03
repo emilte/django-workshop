@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Start project](startproject.md)
 
 # Task: Linter
 
@@ -9,7 +9,15 @@ The project is already setup with a config file [.flake8](/.flake8).
 <br>
 <br>
 
-## Install linter
+Table of contents:
+
+- [Step 1: Install linter](#step-1-install-linter)
+- [Step 2: Setup editor](#step-2-setup-editor)
+
+<br>
+<br>
+
+## Step 1: Install linter
 
 1. Install `flake8` inside your virtual environment.
 2. Install plugin `flake8-quotes`. Rule to use single quote `'` instead of double quote `"`.
@@ -32,7 +40,10 @@ docker compose exec clean pipenv run flake8 --config .flake8
 
 </details>
 
-## Setup editor
+<br>
+<br>
+
+## Step 2: Setup editor
 
 Enable flake8 in VSCode (or other editor).
 Point to the config file [.flake8](/.flake8).

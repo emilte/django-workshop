@@ -1,4 +1,4 @@
-/ [Documentation](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Blog application](blog.md)
+/ [Menu](/documentation/README.md) / [Tasks](/documentation/tasks/README.md) / [Blog application](blog.md)
 
 # Task: Blog application
 
@@ -17,7 +17,6 @@ Table of contents:
 - [Bonus 1: Modify behaviour on save](#bonus-1-modify-behaviour-on-save)
 
 <br>
-<hr>
 <br>
 
 ## Step 1: Initialize application
