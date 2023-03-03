@@ -2,6 +2,7 @@
   "recommendations": [
     "ms-python.python",
     "orta.vscode-jest",
+    "mikestead.dotenv",
     "batisteo.vscode-django",
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",

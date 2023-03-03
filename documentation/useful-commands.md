@@ -2,6 +2,341 @@
 
 # Useful commands
 
-This is the general architecture of the repository.
+Here you can find a list of useful commands for the workshop.  
+To avoid confusion of which context to run each command, I strive to make them all usable
+from the host-machine.
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="461px" height="351px" viewBox="-0.5 -0.5 461 351" content="&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2023-02-19T19:19:02.320Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36&quot; version=&quot;20.3.6&quot; etag=&quot;6dQXCAQ8sm_vNCR3xpR9&quot;&gt;&lt;diagram id=&quot;agVI2gf8ggu9rigNNaSl&quot;&gt;1VbBcpswEP0aZtpDPSBFMhxjJ20uPWWmPctIGE2ERIWI7Xx9VyBsE3AmnTqHnBBvVyvt230sEV5X+x+W1eVPw4WKUMz3Eb6LEEpQlsLDI4ceSeMAbK3kwekEPMoXEcA4oK3kohk5OmOUk/UYzI3WIncjjFlrdmO3wqjxqTXbignwmDM1RX9L7sqQBVqe8Acht+VwckKz3lKxwTlk0pSMm90ZhO8jvLbGuH5V7ddCefIGXvp93y9YjxezQrv3bED9hmem2pBbuJc7DMla02ouvH8S4dWulE481iz31h2UF7DSVSqYC6nU2ihju72YE5HyG8AbZ82TOLOkaIMpBUu4gLBO7C8mkRypgZ4SphLOHsBl2EDjQGfopxsa3nen6hyx8qwymASQhY7YHoOfSINF4G2eQzzh8ME0rqt2XkoN2G2EqIIjVxsLq63r0n6NcJM/Cdt1bVWbRsBK7EXuASWYntQF+HJj8pmSWw1rJQpv8ZxKaNrbAFeSc795ZUUjX9imCxTDe22kdh0BZBWROx+pdabpZZdMqqeNz2lU6gBdpZaYvKolmtQyWc7Ukl6hlDcfLAcm0iKfkwPNU7EprkUhoiMKyfBhOpdDnC3Icsoiomgx0PA/TJIJk2ujHQM5+Bb/0rX013cqY0C4fB7Vgv5p/Xdy5ZXwLTQ/BIxD/58chkC1rIX2MWwLeqKs8uXSm6Y+OwQS684Zjn636nIoDyT3aXVHxt9QgpOp7tAH6Y5+rO6KokD5rO443VBytTFE8JjCNFvQCYl4bhAlS7KgV5DdcobIvq+b2s+QGfVMZfJLWtcyHxbUIq3RVcfAG1qFa/XxL0m4PrjS6G4mavg7WtSet6MEO2cYe2DkR/Bf9fe5p95yPPVIlk3Vl11HffB6+sHsbGe/6fj+Lw==&lt;/diagram&gt;&lt;/mxfile&gt;"><defs/><g><rect x="0" y="0" width="460" height="350" rx="52.5" ry="52.5" fill="#d5e8d4" stroke="#82b366" pointer-events="all"/><rect x="35" y="2" width="170" height="60" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 32px; margin-left: 37px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">Host machine:<br /><br />docker compose exec clean</div></div></div></foreignObject><text x="37" y="36" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">Host machine:...</text></switch></g><rect x="26" y="67" width="409.57" height="262.24" rx="39.34" ry="39.34" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/><rect x="50" y="71" width="120" height="60" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 101px; margin-left: 110px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">Container (clean):<br /><br /><div style="text-align: left;">pipenv run </div></div></div></div></foreignObject><text x="110" y="105" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">Container (clean):...</text></switch></g><rect x="53" y="129.6" width="360" height="175.64" rx="26.35" ry="26.35" fill="#fff2cc" stroke="#d6b656" pointer-events="all"/><rect x="75" y="139" width="190" height="60" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 169px; margin-left: 77px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;"><span style="">Virtual environment:<br /></span><br />python manage.py &lt;command&gt;</div></div></div></foreignObject><text x="77" y="173" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">Virtual environment:...</text></switch></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text></a></switch></svg>
+This is the general architecture of the repository.  
+It becomes significantly easier to remember the long chain of commands when you realise what each segment does.  
+(Replace `clean` with `solution` to enter the other container)
+
+Example to list all files inside the container:
+
+```
+docker compose exec clean ls -la
+```
+
+![Chain of commands](/documentation/images/commands.png)
+
+<br>
+<br>
+
+Table of contents:
+
+- [🐳 Docker](#-docker)
+  - [🐳 Docker: Open shell in container](#-docker-open-shell-in-container)
+  - [🐳 Docker: Run command inside already running container](#-docker-run-command-inside-already-running-container)
+  - [🐳 Docker: Build project](#-docker-build-project)
+  - [🐳 Docker: Start all containers](#-docker-start-all-containers)
+  - [🐳 Docker: Start individual container](#-docker-start-individual-container)
+  - [🐳 Docker: Run a one-off command with new container](#-docker-run-a-one-off-command-with-new-container)
+  - [🐳 Docker: Remove containers](#-docker-remove-containers)
+- [🐍 Python](#-python)
+  - [🐍 Pyenv: Install python](#-pyenv-install-python)
+  - [🐍 Python: Call submodule of Python](#-python-call-submodule-of-python)
+  - [🐍 Python: Install pipenv](#-python-install-pipenv)
+  - [🐍 Pipenv: Install virtual environment with dependencies](#-pipenv-install-virtual-environment-with-dependencies)
+  - [🐍 Pipenv: Install package](#-pipenv-install-package)
+  - [🐍 Pipenv: Uninstall package](#-pipenv-uninstall-package)
+  - [🐍 Pipenv: Run command inside virtual environment](#-pipenv-run-command-inside-virtual-environment)
+  - [🐍 Django: Show all commands](#-django-show-all-commands)
+  - [🐍 Django: Run command](#-django-run-command)
+  - [🐍 Django: Makemigrations](#-django-makemigrations)
+  - [🐍 Django: Migrate](#-django-migrate)
+  - [🐍 Django: Open shell](#-django-open-shell)
+
+<br>
+<hr>
+<br>
+
+## 🐳 Docker
+
+<br>
+<br>
+
+### 🐳 Docker: Open shell in container
+
+> `<container-name>` is defined under `services` in [docker-compose.yml](/docker-compose.yml).
+
+```bash
+docker compose exec <container-name> <command>
+```
+
+```bash
+# Example:
+docker compose exec clean bash
+```
+
+<br>
+<br>
+
+### 🐳 Docker: Run command inside already running container
+
+> `<container-name>` is defined under `services` in [docker-compose.yml](/docker-compose.yml).
+
+```bash
+docker compose exec <container-name> <command>
+```
+
+```bash
+# Example:
+docker compose exec clean echo "Hello World!"
+```
+
+<br>
+<br>
+
+### 🐳 Docker: Build project
+
+```bash
+docker compose build
+```
+
+<br>
+<br>
+
+### 🐳 Docker: Start all containers
+
+```bash
+docker compose up
+```
+
+<br>
+<br>
+
+### 🐳 Docker: Start individual container
+
+> `<container-name>` is defined under `services` in [docker-compose.yml](/docker-compose.yml).
+
+```bash
+docker compose up <container-name>
+```
+
+```bash
+# Example:
+docker compose up clean
+```
+
+<br>
+<br>
+
+### 🐳 Docker: Run a one-off command with new container
+
+> `--rm` removes container after exiting.  
+> `<container-name>` is defined under `services` in [docker-compose.yml](/docker-compose.yml).
+
+```bash
+docker compose run --rm <container-name> <command>
+```
+
+```bash
+# Example:
+docker compose run --rm clean echo "Hello World!"
+```
+
+<br>
+<br>
+
+### 🐳 Docker: Remove containers
+
+> `<container-name>` is defined under `services` in [docker-compose.yml](/docker-compose.yml).
+
+```bash
+docker compose down
+```
+
+<br>
+<hr>
+<br>
+
+## 🐍 Python
+
+<br>
+
+### 🐍 Pyenv: Install python
+
+> `pyenv` must be installed.  
+> Must run inside same directory as [.python-version](/.python-version) to recognise version automatically. Otherwise specify manually.
+
+```bash
+pyenv install
+```
+
+```bash
+# Explicitly
+pyenv install --python 3.11
+```
+
+<br>
+<br>
+
+### 🐍 Python: Call submodule of Python
+
+```bash
+python -m <module>
+```
+
+```bash
+# Example:
+python -m pip
+```
+
+<br>
+<br>
+
+### 🐍 Python: Install pipenv
+
+Pipenv is a packet manager with virtual environment.
+
+> Python equivalent of `npm`/`yarn`.
+
+```bash
+python -m pip install pipenv
+```
+
+<br>
+<br>
+
+### 🐍 Pipenv: Install virtual environment with dependencies
+
+> Must run inside same directory as [Pipfile](/solution/Pipfile) to recognise dependencies. Similar to `package.json`.
+
+> `PIPENV_VENV_IN_PROJECT=1` creates the folder `.venv` inside the same directory.
+
+```bash
+PIPENV_VENV_IN_PROJECT=1 python -m pipenv install
+```
+
+<br>
+<br>
+
+### 🐍 Pipenv: Install package
+
+```bash
+python -m pipenv install <package>
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv install <package>
+```
+
+<br>
+<br>
+
+### 🐍 Pipenv: Uninstall package
+
+```bash
+python -m pipenv uninstall <package>
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv uninstall <package>
+```
+
+<br>
+<br>
+
+### 🐍 Pipenv: Run command inside virtual environment
+
+```bash
+python -m pipenv run <command>
+```
+
+```bash
+# Example:
+python -m pipenv run python -V
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv run python -V
+```
+
+<br>
+<br>
+
+### 🐍 Django: Show all commands
+
+```bash
+python -m pipenv run python manage.py
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv run python manage.py
+```
+
+<br>
+<br>
+
+### 🐍 Django: Run command
+
+```bash
+# Locally:
+python -m pipenv run python manage.py <command>
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv run python manage.py <command>
+```
+
+<br>
+<br>
+
+### 🐍 Django: Makemigrations
+
+Scans all files named `models.py` and creates migrations for the database.
+
+> NOTE: Does not apply migrations.
+
+```bash
+# Locally:
+python -m pipenv run python manage.py makemigrations
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv run python manage.py makemigrations
+```
+
+<br>
+<br>
+
+### 🐍 Django: Migrate
+
+Applies all migrations to the database.
+
+```bash
+# Locally:
+python -m pipenv run python manage.py migrate
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv run python manage.py migrate
+```
+
+<br>
+<br>
+
+### 🐍 Django: Open shell
+
+Python shell with access to all dependencies and database.
+
+```bash
+python -m pipenv run python manage.py shell
+```
+
+```bash
+# Inside container:
+docker compose exec clean python -m pipenv run python manage.py migrate
+```
+
+<br>
+
+[👆 Back to top](#useful-commands)
+
+[👈 Back to Tasks](/documentation/tasks/README.md)

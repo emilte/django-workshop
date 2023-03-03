@@ -2,6 +2,8 @@
 
 # Prerequisites
 
+## TL;DR:
+
 1. `pyenv` (recommended)
 2. `python` (3.11)
 3. `pipenv` (sub-package of python)
@@ -12,7 +14,7 @@
 <br>
 <br>
 
-# 1. Install pyenv
+## 1. Install pyenv
 
 `pyenv` is a python version manager.  
 It provides easy installation and usage of multiple versions of python.

@@ -4,6 +4,8 @@
 
 Choose the path you are interested in 😃
 
+I recommend starting with `Start project`, followed by `Blog project` to learn Django basics.
+
 - [Start project](startproject.md)
 - [Blog project](blog.md) (Django basics with database and models)
 - [Debugger](debugger.md)

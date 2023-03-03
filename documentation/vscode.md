@@ -1,19 +1,17 @@
-/ [Documentation](/documentation/README.md) / [vscode](vscode.md)
+/ [Menu](/documentation/README.md) / [VSCode explained](vscode.md)
 
 # VSCode explained
 
 This is not a task, just extra context information about the VSCode configurations.
 
-<hr>
+<br>
+<br>
 
-## Table of contents
+Table of contents:
 
-- [Table of contents](#table-of-contents)
 - [Files explained](#files-explained)
 - [Extensions explained](#extensions-explained)
-  - [Default](#default)
 
-<hr>
 <br>
 <br>
 
@@ -42,12 +40,6 @@ Which folders and files are relevant to VScode, what do they mean, and which one
 
 ## Extensions explained
 
-This section motivates the multiple extensions relevant for this project.
-
-<br>
-
-### Default
-
 List of extensions you should have in this project. Found in [`extensions.json`](/.vscode/extensions.json).
 
 - `ms-python.python` [link](https://marketplace.visualstudio.com/items?itemName=ms-python.python)  
@@ -63,3 +55,5 @@ List of extensions you should have in this project. Found in [`extensions.json`]
 
 - `visualstudioexptteam.vscodeintellicode` [link](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode)  
   Used in conjunction with `pylance` to enable smart suggestions during development.
+
+"mikestead.dotenv",
