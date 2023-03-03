@@ -127,12 +127,10 @@ class Blog(models.Model):
 <br>
     
 ## Step 4: Connect the Django admin site to the models
-The admin site is an interface accessable to users with a username and pasword, that can be used to manage the content on the site. To log into the admin site and access all functionality you should have created a superuser in a previous step.
+The admin site is an interface accessible to users with a username and password, that can be used to manage the content on the site. To log into the admin site and access all functionality you should have created a superuser in a previous step.
 
 Resource: https://docs.djangoproject.com/en/4.1/ref/contrib/admin/ 
-    
-- mention something on the requrements added into INSTALLED_APPS when startproject is used?
-    
+        
 First enter https://localhost:8001/admin/ and log in using the username and password you have defined. This will show the Django admin site/panel, but it does not contain any information on the models you have created yet. To connect the models you defined in blog/models.py registrer the models in blog/admin.py as described in the resource-link. 
     
 <details>
@@ -178,7 +176,6 @@ from blog.models import BlogPost
 # Create your views here.
     
 class Home(View):
-    template_name: str = 'blog/home.html'
     
     def get(self, request: HttpRequest) -> HttpResponse:
         return HttpResponse('Welcome to my blog!')
@@ -232,7 +229,7 @@ Now you can enter https://localhost:8001/blog/all/.
 ## Step 7: Display blog posts
 To display the blog posts you have created in the admin panel instead of the text you chose in the previous step, the http response returned by the view has to to contain the blog posts.
 
-Resource: https://docs.djangoproject.com/en/4.1/intro/tutorial03/ (go down to "Writing views that actually do something")
+Resource: https://docs.djangoproject.com/en/4.1/intro/tutorial03/ (go to "Writing views that actually do something")
     
 Change the view to return a html-response containing the blog posts. 
 NB: Try using Type.objects.all() if you want to display all the blog posts, as objects.all() displays all the questions in the database.
@@ -270,10 +267,8 @@ NB: You can use the Django documentation to discover how to add the blog posts t
 # blog/templates/blog/home.html
     
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="{% static 'blog/styles.css' %}" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
