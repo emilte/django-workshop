@@ -14,6 +14,10 @@ Table of contents:
 - [Step 1: Initialize application](#step-1-initialize-application)
 - [Step 2: Add app to project](#step-2-add-app-to-project)
 - [Step 3: Create model](#step-3-create-model)
+- [Step 4: Connect the Django admin site to the models](#step-4-connect-the-django-admin-site-to-the-models)
+- [Step 5: Create views for displaying content](#step-5-create-views-for-displaying-content)
+- [Step 6: Mapping URLs to views](#step-6-mapping-urls-to-views)
+- [Step 7: Display blog posts](#step-7-display-blog-posts)
 - [Bonus 1: Modify behaviour on save](#bonus-1-modify-behaviour-on-save)
 
 <br>
@@ -126,7 +130,7 @@ class Blog(models.Model):
 <br>
     
 ## Step 4: Connect the Django admin site to the models
-The admin site is an interface accessible to users with a username and password, that can be used to manage the content on the site. To log into the admin site and access all functionality you should have created a superuser in a previous step.
+The admin site is an interface accessible to users with a username and password, that can be used to manage the content on the site. To log into the admin site and access all functionality you should have created a superuser in a previous step *add link*.
 
 Resource: https://docs.djangoproject.com/en/4.1/ref/contrib/admin/ 
         
