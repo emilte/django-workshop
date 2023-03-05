@@ -1,13 +1,24 @@
 from django.db import models
-from django.utils.translation import gettext as _
 from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
+    """
+    Recommended by Django.
+    Inherit all the same functionality.
+
+    Makes the User object part of our object instead of hidden behind the Django framework.
+    Enables custom configuration if needed later.
+    """
     ...
 
 
 class FieldDisplay(models.Model):
+    """
+    This model was created to display an overview of which Fields that exist in Django.
+
+    You should inspect it in the admin panel.
+    """
 
     class Type(models.TextChoices):
         NURSE = 'nurse'
@@ -54,3 +65,34 @@ class FieldDisplay(models.Model):
             ('can_change_created_date', 'Can change created date'),
         ]
         get_latest_by = ['-created']
+
+
+class Author(models.Model):
+    first_name = models.CharField(max_length=42, blank=True, null=True)
+    last_name = models.CharField(max_length=42, blank=True, null=True)
+    born = models.DateTimeField(blank=True, null=True)
+
+    def __str__(self) -> str:
+        """
+        Returns the string representation of an instance.
+        We want to see the full name (strip whitespace if partially missing name)
+        """
+        return f'{self.last_name} {self.last_name}'.strip()
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=100, blank=False, null=True)
+    text = models.TextField(blank=False, null=True)
+    author = models.ForeignKey(Author, on_delete=models.PROTECT, blank=True, null=True)
+    published = models.DateTimeField()
+    hidden = models.BooleanField(default=False)
+
+    last_updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        """
+        Returns the string representation of an instance.
+        We want to see the title.
+        """
+        return f'{self.title}'

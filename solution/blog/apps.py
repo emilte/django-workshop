@@ -12,12 +12,15 @@ class BlogConfig(AppConfig):
     name = 'blog'
 
     def ready(self) -> None:
-        from . import signals
-        from django.core import management
+        from . import signals  # noqa: F401
+        from .models import User
 
         if settings.DEBUG:
             try:
-                LOG.info(f"Attempt to create superuser '{os.environ.get('DJANGO_SUPERUSER_USERNAME')}'")
-                management.call_command('createsuperuser', interactive=False)
+                username = os.environ.get('DJANGO_SUPERUSER_USERNAME')
+                password = os.environ.get('DJANGO_SUPERUSER_PASSWORD')
+                email = os.environ.get('DJANGO_SUPERUSER_EMAIL')
+                LOG.info(f"Attempt to create superuser '{username}'")
+                User.objects.create_superuser(username=username, password=password, email=email)
             except Exception as e:
                 LOG.info(e)

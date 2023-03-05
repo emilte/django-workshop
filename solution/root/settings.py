@@ -24,7 +24,7 @@ print(f"=== {os.environ['DJANGO_SETTINGS_MODULE']=}")  # noqa: T201
 ### End: Print variables ###
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True) == 'yes'
+DEBUG = os.environ.get('DEBUG', 'yes') == 'yes'
 
 ALLOWED_HOSTS: list[str] = ['*']
 
@@ -126,7 +126,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.SessionAuthentication'],
     'DEFAULT_PERMISSION_CLASSES':
         [
-            # 'rest_framework.permissions.IsAuthenticated',
+            'rest_framework.permissions.IsAuthenticated',
             # 'rest_framework.permissions.DjangoObjectPermissions',
             'blog.custom_classes.permission_classes.CustomDjangoObjectPermissions',
         ]

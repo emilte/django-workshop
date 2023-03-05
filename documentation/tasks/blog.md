@@ -79,7 +79,10 @@ To get you started -- you should probably have a `title`, and maybe an `author`.
 Bonus:
 You can create more models to achieve relations.
 
-Resource: https://docs.djangoproject.com/en/4.1/topics/db/models/
+Resources:
+
+- https://docs.djangoproject.com/en/4.1/topics/db/models/
+- See `FieldDisplay` in [/solution/blog/models.py](/solution/blog/models.py) or [http://localhost:8002/admin/blog/fielddisplay/](http://localhost:8002/admin/blog/fielddisplay/)
 
 <details>
 <summary>Solution</summary>

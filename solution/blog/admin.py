@@ -14,6 +14,8 @@ from blog.custom_classes.admin_classes import (
 
 from .models import (
     User,
+    Author,
+    BlogPost,
     FieldDisplay,
 )
 
@@ -37,12 +39,11 @@ admin.site.unregister(Group)
 @admin.register(User)
 class UserAdmin(CustomGuardedUserAdmin):
     sortable_by = [
-        'id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'last_login',
-        'date_joined'
+        'id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'last_login', 'date_joined'
     ]
     list_display = [
-        'id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser',
-        'group_memberships', 'last_login', 'date_joined'
+        'id', 'username', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'group_memberships', 'last_login',
+        'date_joined'
     ]
     list_display_links = ['id', 'username']
     list_select_related = True
@@ -151,9 +152,9 @@ class FieldDisplayAdmin(CustomGuardedModelAdmin):
     # ordering = ['user']
     # sortable_by = ['id', 'user', 'permission', 'content_type']
     list_display = [
-        'id', '__str__', 'charfield', 'charfield_unique', 'unique_together_one', 'unique_together_two',
-        'charfield_unique', 'textfield', 'boolean', 'time', 'date', 'boolean', 'choices', 'foreignkey', 'duration',
-        'file_field', 'email', 'float_field', 'integer', 'email', 'image', 'json', 'url', 'uuid', 'updated', 'created'
+        'id', '__str__', 'charfield', 'charfield_unique', 'unique_together_one', 'unique_together_two', 'charfield_unique', 'textfield',
+        'boolean', 'time', 'date', 'boolean', 'choices', 'foreignkey', 'duration', 'file_field', 'email', 'float_field', 'integer', 'email',
+        'image', 'json', 'url', 'uuid', 'updated', 'created'
     ]
     list_filter = ['choices']
     search_fields = ['id']
@@ -162,6 +163,26 @@ class FieldDisplayAdmin(CustomGuardedModelAdmin):
     # list_select_related = True
 
     readonly_fields = ['updated', 'created']
+
+
+@admin.register(Author)
+class AuthorAdmin(CustomGuardedModelAdmin):
+    list_display = ['id', '__str__', 'first_name', 'last_name', 'born', 'blog_posts']
+    search_fields = ['id', 'first_name', 'last_name']
+
+    # list_select_related = True
+
+    def blog_posts(self, obj: Author) -> int:
+        n: int = BlogPost.objects.filter(author=obj)
+        return n
+
+
+@admin.register(BlogPost)
+class BlogPostAdmin(CustomGuardedModelAdmin):
+    _author_search_fields = AuthorAdmin.custom_search_fields(prefix='author')
+
+    list_display = ['id', '__str__', 'author', 'title', 'published', 'last_updated', 'created']
+    search_fields = ['id', 'title', *_author_search_fields]
 
 
 ### End: Our models ###

@@ -1,9 +1,7 @@
 # imports
 from rest_framework import routers
 
-from django.conf import settings
 from django.urls import path, include
-from django.conf.urls.static import static
 
 from . import views
 # End: imports -----------------------------------------------------------------
@@ -11,12 +9,12 @@ from . import views
 app_name = 'blog'
 
 router = routers.DefaultRouter()
+router.register('author', views.AuthorViewSet)
+router.register('blog-post', views.BlogPostViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('test/', views.TestView.as_view()),
+    path('json/', views.JsonView.as_view()),
+    path('hello/', views.HelloView.as_view()),
+    path('all/', views.AllBlogPostsView.as_view()),
 ]
-
-# Setup static access and media upload
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

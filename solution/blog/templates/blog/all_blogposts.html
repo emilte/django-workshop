@@ -1,0 +1,13 @@
+<div>
+  <h1>Django Blog</h1>
+  <p>Welcome to my super cool blog written in Django!</p>
+</div>
+
+<div>
+  {% for blog_post in blog_posts %}
+  <div>
+    <h2>{{ blog_post.title }}</h2>
+    <p>{{ blog_post.text }}</p>
+  </div>
+  {% endfor %}
+</div>
