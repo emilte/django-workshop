@@ -35,3 +35,5 @@ venv/
 !.vscode/README.md
 !.vscode/settings.*.json
 !.vscode/tasks.json
+
+.DS_Store
