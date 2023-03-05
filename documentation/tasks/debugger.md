@@ -10,7 +10,7 @@ You should probably make a View before doing this in order to have something to 
 NOTE:
 
 > 1. The docker-compose config and VSCode are already configured to expect a process on port `5678`.
-> 2. Because of hot-reload, the debugger process will be restarted with the container when changes are made. You must start re-attach VSCode to continue debugging the "new" code.
+> 2. Because of hot-reload, the debugger process will be shutdown whenever there are changes in the container. You must start re-attach VSCode to continue debugging the "new" code.
 
 <br>
 <br>
@@ -35,7 +35,7 @@ Install `debugpy` inside the virtual environment of container `clean`.
 From root of project on host machine:
 
 ```
-docker compose exec clean pipenv run
+docker compose exec clean pipenv install debugpy
 ```
 
 </details>
@@ -46,7 +46,7 @@ docker compose exec clean pipenv run
 ## Step 2: Initialize debugger
 
 Attach a debugger to the django server.
-Use host `0.0.0.0` with post `5678`.
+Use host `0.0.0.0` with port `5678`.
 Initialize inside the file `clean/root/wsgi.py`.
 
 <details>
@@ -65,7 +65,7 @@ Go to the debug tab in VSCode in the left sidebar.
 At the top you can select which configuration you want to use (see [launch.json](/.vscode/launch.json)).
 Select the one for `clean`, the editor should now be orange.
 
-> Ff you have another editor than VSCode, you must configure it yourself. The process is running as mentioned on port `5678`, so in theory anything can listen to it.
+> If you some other editor than VSCode, you must configure it yourself. The process is running as mentioned on port `5678`, so in theory anything can listen to it.
 
 <br>
 <br>
