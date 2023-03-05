@@ -186,11 +186,15 @@ class Home(View):
 <br>
 <br>
 
-## Step 6: Mapping URLs to views
+## Step 6: Mapping url to view
 
-You now have a view that contains a http response which includes something you want to display. To display this view at a particular URL, you'll need to create a URLconf which is a mapping between URL path expressions and Python functions (your views). Use the given resources, as well as the comments in root/urls.py and blog/urls.py to map between the URLs and views.
+To display the view at a particular url, you'll need to map a path to the view.  
+Use the given resources, as well as the comments in `root/urls.py` and `blog/urls.py` as guidance.
 
-Resource: https://docs.djangoproject.com/en/4.1/topics/http/urls/
+Resources:
+
+- https://docs.djangoproject.com/en/4.1/topics/http/urls/
+- [Urls](/documentation/urls.md)
 
 <details>
 <summary>Solution</summary>
@@ -230,7 +234,14 @@ Now you can enter https://localhost:8001/blog/all/.
 
 The content you displayed in the previous view isn't particularly interesting.
 
+<details>
+<summary>What do we want?</summary>
+
 ![We want to see all the blogposts!](/documentation/images/blogposts.jpg)
+
+</details>
+
+<br>
 
 To display the blog posts, you can render an html page instead.  
 Luckily, Django has a built in template system.  
