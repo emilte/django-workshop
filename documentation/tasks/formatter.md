@@ -2,14 +2,15 @@
 
 # Task: Formatter
 
-> This task requires that you have installed
-
 In this task you will install and configure a formatter named `yapf` for your editor.
 `yapf` only cares about whitespace, it will not modify any other characters.
 
-There are several configurations, for example always two empty lines before a class declaration.
+You already have this setup configured in the root directory of this project (given that you completed the local setup in README). For this task, you can open a new window in VSCode from the folder `clean`. That way, you will start without any interpreter or vscode settings.
+
+Yapf have several configurations, for example always two empty lines before a class declaration.
 
 > This task is intended to be performed locally on your host machine, not inside docker container.
+> The local setup from README is _required_ for this task.
 
 <br>
 <br>
@@ -40,7 +41,16 @@ pyenv exec pipenv install yapf
 <br>
 <br>
 
-## Step 2: Setup editor
+## Step 2: Select interpreter
+
+Open a new window in VSCode from the folder `clean` and select the `.venv` folder as interpreter.
+
+See [README](/README.md#step-4-install-dependencies-optional) step 4 and 5 for these instruction.
+
+<br>
+<br>
+
+## Step 3: Setup editor
 
 Tell VSCode to format file on save with `yapf`.
 
