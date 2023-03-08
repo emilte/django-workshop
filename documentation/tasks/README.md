@@ -4,7 +4,7 @@
 
 Choose the path you are interested in 😃
 
-I recommend starting with `Start project`, followed by `Blog project` to learn The basics of Django.
+I recommend starting with `Start project`, followed by `Blog project` to learn the basics of Django.
 
 - [Start project](startproject.md)
 - [Blog project](blog.md) (Django basics with database, models, urls, views and templates)
@@ -13,7 +13,7 @@ I recommend starting with `Start project`, followed by `Blog project` to learn T
 - [Formatter (yapf)](formatter.md) (local setup)
 - [Linter (flake8)](linter.md) (local setup)
 - [Logging](logging.md)
-- [Rest Framework API](rest.md)
+- [Django REST framework](rest.md)
 - [Security](security.md)
 
 <br>

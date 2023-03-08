@@ -161,6 +161,9 @@ After registering the models you can re-enter the admin site. It should now be p
 
 ## Step 5: Create views for displaying content
 
+> Steps 5 to 7 will focus on Django's built in template system.  
+> If you are more interested in an API setup, you may consider jumping to [Task: Django REST framework](rest.md) instead.
+
 In this section you will create a view in order to display content. Views can be function-based or class-based, in this workshop the latter is used. You can read more about the two approaches in the resource link. A view takes a web request and returns a web response, which for example can be the html content on your page.
 
 Resource: https://docs.djangoproject.com/en/4.1/topics/class-based-views/intro/#using-class-based-views
