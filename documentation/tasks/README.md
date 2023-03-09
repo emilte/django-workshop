@@ -14,7 +14,7 @@ I recommend starting with `Start project`, followed by `Blog project` to learn t
 - [Linter (flake8)](linter.md) (local setup)
 - [Logging](logging.md)
 - [Django REST framework](rest.md)
-- [Security](security.md)
+- [Permissions](permissions.md)
 
 <br>
 <br>

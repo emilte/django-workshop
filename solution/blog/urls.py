@@ -17,4 +17,5 @@ urlpatterns = [
     path('json/', views.JsonView.as_view()),
     path('hello/', views.HelloView.as_view()),
     path('all/', views.AllBlogPostsView.as_view()),
+    path('user/<str:username>/', views.PermissionTestView.as_view()),
 ]
