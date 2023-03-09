@@ -2,10 +2,7 @@
 
 # Tast: Logging
 
-<br>
-<br>
-
-Table of contents:
+![Missing task](/documentation/images/missing_task.jpeg)
 
 <br>
 <br>
