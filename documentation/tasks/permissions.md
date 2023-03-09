@@ -53,7 +53,7 @@ Try to assign at least one user permission and one group permission on this user
 <details>
 <summary>Solution</summary>
 
-Can be performed in the admin panel on the detail page of a user.
+![Browse admin panel](/documentation/images/browse_admin.jpg)
 
 </details>
 
