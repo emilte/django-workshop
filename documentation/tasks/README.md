@@ -8,13 +8,15 @@ I recommend starting with `Start project`, followed by `Blog project` to learn t
 
 - [Start project](startproject.md)
 - [Blog project](blog.md) (Django basics with database, models, urls, views and templates)
+- [Django REST framework](rest.md)
+- [ORM](orm.md)
+- [Permissions](permissions.md)
 - [Debugger](debugger.md)
-- [Type checker (mypy)](typing.md) (local setup)
+- [Debugger](debugger.md)
 - [Formatter (yapf)](formatter.md) (local setup)
 - [Linter (flake8)](linter.md) (local setup)
 - [Logging](logging.md)
-- [Django REST framework](rest.md)
-- [Permissions](permissions.md)
+- [Type checker (mypy)](typing.md) (local setup)
 
 <br>
 <br>
