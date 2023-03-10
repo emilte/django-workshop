@@ -12,7 +12,6 @@ I recommend starting with `Start project`, followed by `Blog project` to learn t
 - [ORM](orm.md)
 - [Permissions](permissions.md)
 - [Debugger](debugger.md)
-- [Debugger](debugger.md)
 - [Formatter (yapf)](formatter.md) (local setup)
 - [Linter (flake8)](linter.md) (local setup)
 - [Logging](logging.md)
