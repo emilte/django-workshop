@@ -115,4 +115,8 @@ docker compose exec clean pipenv run python manage.py createsuperuser
 <br>
 <br>
 
+<br>
+
 👈 Back to [Tasks](/documentation/tasks/README.md)
+
+or continue to [Task: Blog application](blog.md) 👉
