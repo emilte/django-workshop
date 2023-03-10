@@ -158,7 +158,3 @@ class BlogPost(models.Model):
 <br>
 
 👈 Back to [Tasks](/documentation/tasks/README.md)
-
-```
-
-```
