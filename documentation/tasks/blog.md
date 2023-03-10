@@ -16,7 +16,7 @@ Table of contents:
 - [Step 3: Create model](#step-3-create-model)
 - [Step 4: Connect the Django admin site to the models](#step-4-connect-the-django-admin-site-to-the-models)
 - [Step 5: Create views for displaying content](#step-5-create-views-for-displaying-content)
-- [Step 6: Mapping URLs to views](#step-6-mapping-urls-to-views)
+- [Step 6: Mapping url to view](#step-6-mapping-url-to-view)
 - [Step 7: Display blog posts](#step-7-display-blog-posts)
 - [Bonus 1: Modify behaviour on save](#bonus-1-modify-behaviour-on-save)
 
@@ -75,6 +75,9 @@ INSTALLED_APPS = [
 Create a model for `BlogPost`.  
 Be creative, identify fields you find relevant to a blogpost.  
 To get you started -- you should probably have a `title`, and maybe an `author`.
+
+Hint:  
+Restart the server to create and apply migrations to the database whenever you make model changes.
 
 Bonus:
 You can create more models to achieve relations.
