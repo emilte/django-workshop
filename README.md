@@ -107,7 +107,7 @@ cd solution
 > `PIPENV_VENV_IN_PROJECT=1` will ensure that the environment is installed within this folder.
 
 ```
-PIPENV_VENV_IN_PROJECT=1 pyenv exec pipenv install --python 3.11
+PIPENV_VENV_IN_PROJECT=1 pyenv exec pipenv install --dev --python 3.11
 ```
 
 <br>
